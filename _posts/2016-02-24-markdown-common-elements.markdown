@@ -3,7 +3,7 @@ title: "Markdown Common Elements"
 layout: post
 date: 2016-02-24 22:44
 image: /assets/images/markdown.jpg
-headerImage: false
+headerImage: true
 tag:
 - markdown
 - elements
@@ -164,7 +164,7 @@ A HTML Example:
 
 A CSS Example:
 
-{% highlight css %}
+{% highlight css linenos %}
 pre {
     padding: 10px;
     font-size: .8em;
@@ -194,6 +194,34 @@ $(window).scroll(function() {
     }
 
 });
+{% endhighlight %}
+
+{% highlight c linenos %}
+//
+//  test.c
+//  
+//
+//  Created by Logan Harvell on 10/4/16.
+//
+//
+
+#include <stdio.h>
+
+int main(int argc, char* argv[])
+{
+
+    int i;
+    for (i = 2; i <= 10; i += 2)
+    {
+        if (i == 2)
+            printf("%dN\t%d*N\t%d*N\t%d*N\n", i, i*10, i*100, i*1000);
+
+        printf("%d\t%d\t%d\t%d\n", i, i*10, i*100, i*1000);
+    }
+
+
+    return 0;
+}
 {% endhighlight %}
 
 [1]: http://daringfireball.net/projects/markdown/

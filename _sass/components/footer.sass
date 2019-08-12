@@ -1,9 +1,10 @@
 .footer-main
-    border-top: 1px solid $epsilon
+    border-top: 2px solid $epsilon
     padding: 40px 0
     margin: 40px 0 0
     font-size: 1.3rem
-    color: $gama
+    color: $beta
+    background-color: transparent
     font-weight: 300
     text-align: center
     position: relative
@@ -13,13 +14,13 @@
         content: " "
         width: 7px
         height: 7px
-        border: $epsilon 1px solid
+        border: $epsilon 2px solid
         position: absolute
         top: -5px
         left: 50%
         margin-left: -5px
-        background: #FFF
-        box-shadow: #FFF 0 0 0 5px
+        background: $backcolor
+        box-shadow: $backcolor 0 0 0 5px
         border-radius: 3px
 
     > .link
@@ -35,18 +36,19 @@
             margin: 0
 
             &:hover
-                fill: $delta !important
+                fill: $highlightcolor !important
 
     > .extra
-        color: $gama
+        color: $beta
         margin-top: 0
 
         > .link
-            color: $beta
+            color: $gama
             text-decoration: none
             border-bottom: 1px solid transparent
             transition: ease-in-out all .3s
             padding-bottom: 1px
 
             &:hover
-                border-color: $gama
+                color: $highlightcolor
+                border-color: $highlightcolor

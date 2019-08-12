@@ -1,21 +1,21 @@
 body, html
 	font-size: 62.5%
+	background: $backcolor
 
 body
 	line-height: 1
 	font: 16px $fontSans
-	color: $alpha
+	color: $beta
 
 h1, h2, h3, h4
+	color: $alpha
 	font-family: $fontSans
-	color: $beta
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
 
 h1
 	font-size: 3rem
 	letter-spacing: -1px
-	color: $beta
 	font-weight: 700
 
 h2
@@ -28,12 +28,11 @@ h4
 	font-size: 1.6rem
 
 a
-	color: $delta
-	text-decoration: underline
+	color: $gama
 
 p
 	line-height: 1.7
-	color: $alpha
+	color: $beta
 	font-weight: 300
 	margin-bottom: 20px
 	letter-spacing: 0.4px
@@ -43,14 +42,14 @@ p
 
 strong
 	font-weight: 400
-	color: #000
+	color: $beta
 
 ul,
 ol
 	li
 		line-height: 2.4rem
 		font-weight: 300
-		color: $alpha
+		color: $gama
 
 img,
 pre,
@@ -78,13 +77,13 @@ figcaption
 
 blockquote
 	padding-left: 15px
-	border-left: 3px solid #eee
+	border-left: 3px solid $epsilon
 
 hr
 	border: none
 	height: 1px
 	margin: 40px auto
-	background: #eee
+	background: $epsilon
 	width: 100%
 
 figure.highlight
@@ -95,11 +94,9 @@ code,
 tt
 	padding: 1px 0
 	font-family: $fontMonospace
-	font-size: 12px
+	font-size: 1.2rem
 	line-height: 20px
-	background: #fff
-	border-radius: 2px
-	border-radius: 2px
+	background: transparent
 
 pre
 	box-sizing: border-box
@@ -110,9 +107,8 @@ pre
 	font-size: 1.2rem
 	line-height: 2rem
 	overflow: auto
-	background: #fff
-	border: 1px solid $epsilon
-	border-radius: 2px
+	background: $epsilon
+	color: $gama
 
 .wrapper-normal,
 .wrapper-large

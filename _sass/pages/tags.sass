@@ -2,8 +2,8 @@
     margin-top: 125px
 
     > .list
-        border-top: 1px solid $epsilon
-        margin-top: 30px
+        border-top: 2px solid $epsilon
+        margin-top: 40px
         padding-top: 40px
         position: relative
 
@@ -12,13 +12,13 @@
             content: " "
             width: 7px
             height: 7px
-            border: $epsilon 1px solid
+            border: $epsilon 2px solid
             position: absolute
             top: -5px
             left: 50%
             margin-left: -5px
-            background: #FFF
-            box-shadow: #FFF 0 0 0 5px
+            background: $backcolor
+            box-shadow: $backcolor 0 0 0 5px
             border-radius: 3px
 
 .tags > .list
@@ -33,11 +33,52 @@
         border-radius: 3px
         font-size: 1.3rem
         background: $epsilon
-        color: $alpha
+        color: $beta
         letter-spacing: 1px
         margin: 0 0.5rem 1rem
         text-decoration: none
         display: inline-block
+
+        &:hover
+            color: $highlightcolor
+
+.tag-list
+    border-top: 2px solid $epsilon
+    margin-top: 40px
+    padding-top: 40px
+    position: relative
+
+    &:before
+        display: block
+        content: " "
+        width: 7px
+        height: 7px
+        border: $epsilon 2px solid
+        position: absolute
+        top: -5px
+        left: 50%
+        margin-left: -5px
+        background: $backcolor
+        box-shadow: $backcolor 0 0 0 5px
+        border-radius: 3px
+
+.tag-list > .title
+    color: $beta
+    font-weight: 300
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 6rem
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
+    padding: 3px 9px
+    border-radius: 3px
+    font-size: 1.3rem
+    background: $epsilon
+    color: $beta
+    letter-spacing: 1px
+    margin: 0 0.5rem 1rem
+    text-decoration: none
+    display: inline-block
 
 .tag-list > .list
     padding: 0
@@ -62,7 +103,7 @@
         font-size: 1.6rem
 
     > .item:hover > .url > .title
-        color: $delta
+        color: $highlightcolor
 
     // maybe we can't nest html5 elements
     // can you help me?
