@@ -20,6 +20,8 @@ title: Tags
     {% assign tags_list = nil %}
 </section>
 
+<hr>
+
 <section class="tag-list">
     {% for tag in site.tags  %}
     <h2 class="title" id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>

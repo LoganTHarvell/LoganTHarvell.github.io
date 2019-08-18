@@ -4,7 +4,13 @@
    or page.title == "Tags"
 %}{% assign showHeader = true %}{% endif %}
 
+{% if page.title == "Home" %}
+    {% include nav.html %}
+    <hr>
+{% endif %}
+
 {% if showHeader == true %}
+
     <header class="header-home {% if site.animation %}animated{% endif %}">
         {% if site.about %}
             <a class="link" href="{{ site.baseurl }}/about">
@@ -17,10 +23,21 @@
         {% endif %}
 
         <h1 class="title">{{ site.name }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
+        <h2 class="subtitle">{{ site.subtitle }}</h2>
+
+        {% if page.title == "Home" %}
+            <p class="bio">{{ site.bio }}</p>
+        {% endif %}
 
         {% include social-links.html %}
     </header>
+
+    {% if page.title != "Home" %}
+        <hr>
+    {% endif %}
+
 {% endif %}
 
-{% include nav.html %}
+{% if page.title != "Home" %}
+    {% include nav.html %}
+{% endif %}

@@ -5,8 +5,25 @@
         text-align: center
         margin-bottom: 6rem
 
+    > hr
+        height: 2px
+
+        &:before
+            display: block
+            content: " "
+            width: 7px
+            height: 7px
+            border: $epsilon 2px solid
+            position: relative
+            top: -3px
+            left: 50%
+            margin-left: -5px
+            background: $backcolor
+            box-shadow: $backcolor 0 0 0 5px
+            border-radius: 3px
+
 .about
     img
-        width: 50%
+        width: 20rem
         margin: 0 auto
         display: block
