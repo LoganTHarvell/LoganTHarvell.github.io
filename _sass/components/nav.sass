@@ -2,8 +2,7 @@
 .nav-home
     > .list
         list-style: none
-        margin: 0
-        padding: 0 13px 0
+        margin: 0 2rem 0.5rem
 
         > .item
             display: inline-block
@@ -12,7 +11,7 @@
             display: inline-block
             font-weight: 300
             font-size: 1.4rem
-            padding: 20px 10px
+            padding: 2rem 0.5rem
             text-decoration: none
             border-bottom: 1px solid transparent
             transition: ease-in-out all .3s
@@ -23,12 +22,27 @@
                 border-color: $highlightcolor
 
 .nav
-    position: absolute
-    right: 0
-    top: 0
+    > .list
+        position: absolute
+        right: 0
+        top: 0
+
+    > .link > .selfie
+        position: absolute
+        left: 0
+        top: 0
+        width: 4rem
+        margin: 1rem 2rem 0.5rem
+        border-radius: 100%
+        transition: all .2s
+        box-shadow: 0
+        opacity: 1
+
+        &:hover
+            box-shadow: 0 0px 4px 0 rgba(0,0,0,0.6), 0 0px 12px 0 rgba(0,0,0,0.6)
+            opacity: .6
 
 .nav-home
-    margin-bottom: 40px
     text-align: center
 
     > .list
@@ -36,4 +50,4 @@
 
         > .item > .link
             font-size: 2rem
-            padding: 7px 15px
+            padding: 1rem 2rem

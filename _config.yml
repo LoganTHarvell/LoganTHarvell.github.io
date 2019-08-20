@@ -2,12 +2,12 @@
 name: Logan Harvell
 subtitle: Programmer by trade. Fellow nerd.
 bio: >
-  Since graduating from the University of Central Florida with a B.S. in Computer
-  Science in Fall 2018, I have worked as a research assistant for UCF's
+  Since graduating in Fall 2018 from the University of Central Florida with a
+  B.S. in Computer Science, I have worked as a research assistant for UCF's
   Institute for Simulation and Training. In Fall 2019, I began the programming
-  track for an Interactive Entertainment M.S. at UCF's Florida Interactive
-  Entertainment Academy. I graduate in Fall 2020 and am pursuing work as a
-  programmer in games development.
+  track for an master's degree in Interactive Entertainment at UCF's Florida
+  Interactive Entertainment Academy. I graduate in Fall 2020 and am pursuing
+  work as a programmer in games development.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -63,7 +63,7 @@ email: logan@harvell.biz
 authors:
     loganharvell:
         name: Logan Harvell
-        bio: Graduate student at UCF's FIEA, Interactive Entertainment M.S.
+        bio: Graduate student at UCF FIEA, M.S. in Interactive Entertainment
         external-image: false
         picture: assets/images/profile.jpg
         twitter: LoganTHarvell
