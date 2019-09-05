@@ -1,9 +1,8 @@
 ---
 title: About
-layout: page
+layout: about
+image: /assets/images/profile2.jpg
 ---
-![Profile Image]({{ site.baseurl }}/{{ site.picture }})
-
 To Be Added
 
 ## Skills

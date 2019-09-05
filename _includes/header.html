@@ -1,24 +1,42 @@
-{% if page.title == "Home"
-   or page.title == "Blog"
-   or page.title == "Projects"
-   or page.title == "Tags"
-%}{% assign showHeader = true %}{% endif %}
-
 {% if page.title == "Home" %}
-    {% include nav.html %}
-    <hr>
+
+        {% assign showHeader = true %}
+
+        {% assign headerTitle = site.name %}
+        {% assign headerSubtitle = site.subtitle %}
+        {% assign headerBio = site.bio %}
+
+        {% assign headerImage = site.picture %}
+        {% assign externalImage = site.external-image %}
+
+        <hr>
+
+{% elsif page.title == "Blog" or page.title == "Projects" %}
+
+        {% assign showHeader = true %}
+
+        {% assign headerTitle = page.title %}
+        {% assign headerSubtitle = page.subtitle %}
+
+        {% assign headerImage = page.headerImage %}
+        {% assign externalImage = page.externalImage %}
+
 {% endif %}
+
 
 {% if showHeader == true %}
 
     <header class="header-home {% if site.animation %}animated{% endif %}">
-        <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.baseurl }}/{{ site.picture }}{% endif %}" />
 
-        <h1 class="title">{{ site.name }}</h1>
-        <h2 class="subtitle">{{ site.subtitle }}</h2>
+        {% if headerImage %}
+            <img class="image" alt="Header Image" src="{% if externalImage %}{{ headerImage }}{% else %}{{ site.baseurl }}/{{ headerImage }}{% endif %}" />
+        {% endif %}
 
-        {% if page.title == "Home" %}
-            <p class="bio">{{ site.bio }}</p>
+        <h1 class="title">{{ headerTitle }}</h1>
+        <h2 class="subtitle">{{ headerSubtitle }}</h2>
+
+        {% if headerBio %}
+            <p class="bio">{{ headerBio }}</p>
         {% endif %}
 
         {% include social-links.html %}
@@ -28,8 +46,4 @@
         <hr>
     {% endif %}
 
-{% endif %}
-
-{% if page.title != "Home" %}
-    {% include nav.html %}
 {% endif %}
