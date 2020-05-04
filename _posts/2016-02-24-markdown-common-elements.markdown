@@ -194,7 +194,7 @@ $(window).scroll(function() {
 });
 {% endhighlight %}
 
-{% highlight c linenos %}
+{% highlight cpp linenos %}
 //
 //  test.c
 //  
@@ -205,9 +205,15 @@ $(window).scroll(function() {
 
 #include <stdio.h>
 
+template<typename T>
+void genericFunc(int param)
+{
+    printf("hello");
+    return;
+}
+
 int main(int argc, char* argv[])
 {
-
     int i;
     for (i = 2; i <= 10; i += 2)
     {

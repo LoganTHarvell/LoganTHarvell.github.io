@@ -1,7 +1,7 @@
 ---
 title: About
 layout: about
-image: /assets/images/profile2.jpg
+image: /assets/images/profile.jpg
 ---
 To Be Added
 

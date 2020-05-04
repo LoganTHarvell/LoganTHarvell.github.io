@@ -1,15 +1,16 @@
 
 // Syntax Highlighting Colors
-$comment-color: #383
-$keyword-color: #C3D
-$type-color: #D85
-$variable-color: #DDD
-$function-color: #57E
-$number-color: #0AA
-$string-color: #BA2
-$string-escape-color: #A74
-$preproc-color: #952
-$default-color: $beta
+$comment-color: #494
+$keyword-color: #CA0
+$type-color: #970
+$variable-color: #FFF
+$function-color: #CCC
+$number-color: #49E
+$string-color: #CA7
+$string-escape-color: #0CC
+$preproc-color: #C48
+$default-color: #CCC
+$error-color: #A00
 
 .highlight
 
@@ -69,7 +70,7 @@ $default-color: $beta
 
 	/* Generic.Error */
 	.gr
-		color: #aa0000
+		color: $error-color
 
 	/* Generic.Heading */
 	.gh
@@ -103,7 +104,7 @@ $default-color: $beta
 
 	/* Generic.Traceback */
 	.gt
-		color: #aa0000
+		color: $error-color
 
 	/* Keyword.Constant */
 	.kc
@@ -127,7 +128,7 @@ $default-color: $beta
 
 	/* Keyword.Type */
 	.kt
-		color: $keyword-color
+		color: $type-color
 
 	/* Literal.Number */
 	.m
@@ -164,11 +165,11 @@ $default-color: $beta
 
 	/* Name.Entity */
 	.ni
-		color: #800080
+		color: $keyword-color
 
 	/* Name.Exception */
 	.ne
-		color: #990000
+		color: $error-color
 		font-weight: bold
 
 	/* Name.Function */
@@ -283,5 +284,5 @@ $default-color: $beta
 
 	/* Error */
 	.err
-		color: #a61717
-		background-color: #e3d2d2
+		color: $error-color
+		background-color: $default-color
