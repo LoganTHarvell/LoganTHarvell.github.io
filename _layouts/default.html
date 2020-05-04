@@ -15,15 +15,15 @@ layout: none
 
     <meta name=description content="{{ site.bio }}">
     <meta name=author content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.baseurl }}/{{ site.picture }}">
+    <meta property="og:image" content="{{ site.url }}/{{ site.picture }}">
     <meta property="og:type" content="profile">
 
     {% seo %}
 
     {% include favicon.html %}
 
-    <link rel="canonical" href="{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}{{ "/feed.xml" }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}

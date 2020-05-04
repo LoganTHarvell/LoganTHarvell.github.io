@@ -2,12 +2,12 @@
 name: Logan Harvell
 subtitle: Programmer by trade. Fellow nerd.
 bio: >
-  Since graduating in Fall 2018 from the University of Central Florida with a
-  B.S. in Computer Science, I have worked as a research assistant for UCF's
+  After graduating in Fall 2018 from the University of Central Florida with a
+  B.S. in Computer Science, I worked as a research assistant for the UCF
   Institute for Simulation and Training. In Fall 2019, I began the programming
-  track for an master's degree in Interactive Entertainment at UCF's Florida
-  Interactive Entertainment Academy. I graduate in Fall 2020 and am pursuing
-  work as a programmer in games development.
+  track at UCF's Florida Interactive Entertainment Academy from which I will graduate in 
+  Fall 2020 with an M.S. in Interactive Entertainment. Currently, I am pursuing 
+  work as a systems and engine programmer for games development.
 
 # summary info
 description: A blog about technology and stuff related
@@ -23,8 +23,8 @@ resume: true
 resume-external: false
 resume-url: 'assets/files/Resume.pdf'
 
-url: https://LoganTHarvell.github.io
 # your url: http://USERNAME.github.io
+url: https://LoganTHarvell.github.io
 
 permalink: /:title/
 
@@ -37,7 +37,7 @@ permalink: /:title/
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: mydisqus # enter this from your disqus account
+  shortname: loganharvell # enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
@@ -66,7 +66,6 @@ authors:
         bio: Graduate student at UCF FIEA, M.S. in Interactive Entertainment
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: LoganTHarvell
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal

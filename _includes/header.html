@@ -29,7 +29,7 @@
     <header class="header-home {% if site.animation %}animated{% endif %}">
 
         {% if headerImage %}
-            <img class="image" alt="Header Image" src="{% if externalImage %}{{ headerImage }}{% else %}{{ site.baseurl }}/{{ headerImage }}{% endif %}" />
+            <img class="image" alt="Header Image" src="{% if externalImage %}{{ headerImage }}{% else %}{{ site.url }}/{{ headerImage }}{% endif %}" />
         {% endif %}
 
         <h1 class="title">{{ headerTitle }}</h1>
