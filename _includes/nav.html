@@ -3,7 +3,7 @@
         {% if page.title != "Home" %}
             <a class="link" href="{{ site.url }}/">
                 <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-                <h3 class="title">{{ site.title }}</h3>
+                <h2 class="title">{{ site.title }}</h2>
             </a>
         {% endif %}
     </div>

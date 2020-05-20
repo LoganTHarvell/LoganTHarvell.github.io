@@ -1,3 +1,64 @@
+@font-face {
+    font-family: "Overpass";
+    src: url("/assets/fonts/overpass-regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("/assets/fonts/overpass-heavy.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("/assets/fonts/overpass-heavy.otf") format('opentype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("/assets/fonts/overpass-italic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("/assets/fonts/overpass-heavy-italic.otf") format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Cousine Nerd Font Mono";
+    src: url("/assets/fonts/Cousine Regular Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cousine Nerd Font Mono";
+    src: url("/assets/fonts/Cousine Bold Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cousine Nerd Font Mono";
+    src: url("/assets/fonts/Cousine Italic Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Cousine Nerd Font Mono";
+    src: url("/assets/fonts/Cousine Bold Italic Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
 
 @import "base/variables";
 @import "base/normalize";
