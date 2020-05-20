@@ -2,8 +2,8 @@
     <div class="nav-home-div">
         {% if page.title != "Home" %}
             <a class="link" href="{{ site.url }}/">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-                <h3 class="title">{{ site.name }}</h3>
+                <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+                <h3 class="title">{{ site.title }}</h3>
             </a>
         {% endif %}
     </div>

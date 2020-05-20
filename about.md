@@ -16,16 +16,3 @@ After graduating, I spent over half a year as a research assitant at UCF's Insti
 At FIEA, I worked on several different small teams to create two week game prototypes, programmed games in from scratch in 68K assembly and C/C++, as well as in Unity and Unreal Engine 4 using C# and C++ respectively. I also developed a custom data-driven game engine from scratch in C++ using JSON as a configuration language. Since December 2019, I've been the lead programmer on Keepers of the Trees at Studio Chili, a studio formed with 20+ artists, desigers, and programmers. [Keepers of the Trees](https://keepersofthetrees.wordpress.com/) is a a local co-op puzzle platformer created in Unreal Engine 4, aiming for release on Steam in August 2020. You can follow the game on twitter [here](https://twitter.com/Keepers_Game).
 
 I anticipate my graduation from FIEA in December 2020. However, starting August 2020 and beyond, I will be pursuing future job opportunities in game development. You can find some of my projects [here]({{ site.url }}/projects/) and my resume [here]({{ site.url }}/assets/files/Resume.pdf). Whether it is about job opportunities or just a chat, please feel free to contact me!
-
-```c++
-// Code Test
-int main()
-{
-    for (int i = 0; i < 100; ++i)
-    {
-        printf("hello world!");
-    }
-
-    return 0;
-}
-```

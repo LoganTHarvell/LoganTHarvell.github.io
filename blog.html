@@ -6,11 +6,13 @@ title: Blog
 subtitle: Musings of a developer.
 headerImage: assets/images/blog.png
 externalImage: false
+pagination:
+  enabled: true
 ---
 <section class="list">
 	{% if site.posts.size == 0 %}
 		<p class="text-center">Nothing published yet!</p>
-	{% elsif site.paginate %}
+	{% elsif site.pagination.enabled %}
 		{% for post in paginator.posts %}
 			{% if post.category == 'blog' %}
 				{% if post.hidden != true %}
