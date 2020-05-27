@@ -87,10 +87,10 @@ This project proposes supporting the integration of multiple rendering API into 
 
 Based on the schedule above, I am now into the second week of the timeline. Work has gonna pretty well on refactoring the engine. Previously the game used a hierachical structure based on a World class as the top level object that managed one or more Sectors. Analagous to a level, Sectors were a container class for the fundamental game object in the engine, Entity class objects. Then it went even further, with Entity objects themselves composed of Actions, which were analagous to components with a connotation that they would represent a specific behavior in their update loop, thus the name. The structure looked a bit like this.
 
-![Markdown Image][/assets/images/OldEngineHierarchy.png]
+![Old Hierarchy][{{ site.url }}/assets/images/OldEngineHierarchy.png]
 
 The new design was simplified and expanded to have everything derived from a shared base game object class, Entity. The Entity class can add, remove, or create child Entity instances. World is a specialized Entity derived class top level game object that manages the GameClock, EventQueue, and WorldState, acting as the root object for a simulation. Since it inherits from Entity, it is capable of managing loading and unloading child Entities as levels. Under the new hierachy, both Sector and the base Action classes were removed, replaced by the single Entity class. This lets Entity form a common base from which all game object's can derive from to be integrated into the game loop, such as the specialized Actions classes. The Actor class is designed to be an Entity with a hierarchical Transform class. The refactored class hierarchy is shown below.
 
-![Markdown Image][/assets/images/NewEngineHierarchy.png]
+![New Hierarchy][{{ site.url }}/assets/images/NewEngineHierarchy.png]
 
 While I am a little behind on finishing testing and implementing the Transform class (getting only a little distracted with thread pools, refactoring the event system, and code cleanup), I am working hard to get back on schedule and I will be back next week with another update! Thanks for reading!
