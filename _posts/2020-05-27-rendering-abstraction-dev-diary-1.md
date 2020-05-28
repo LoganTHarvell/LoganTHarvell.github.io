@@ -1,21 +1,21 @@
 ---
-title: "Rendering Abstraction, Dev Diary #1"
-layout: post
-date: 2020-05-27 13:10
+title: "Rendering Abstraction Layer, Dev Diary #1"
 headerImage: false
+author: LoganHarvell
+date: 2020-05-27 14:54
+layout: post
+category: blog
+description: Creating a rendering abstraction layer for a custom game engine.
 tag:
 - Dev Diary
 - Rendering
 - Engine
 - C++
-category: blog
-author: loganharvell
-description: Markdown summary with different options
 ---
 
 ## Summary
 
-Hello and welcome! My name is Logan Harvell. I am a programmer and graduate student studying at UCF's *Florida Interactive Entertainment Academy*. This post marks the first in a series covering the design and development of a rendering abstraction layer for custom game engine written in C++. Since the beginning of 2020, I have designed and developed a data-driven game engine that uses JSON as a configuration language, and this current project is a continuation of that previous work. I will be posting weekly updates over the next couple of months.
+Hello and welcome! My name is Logan Harvell. I am a programmer and graduate student studying at UCF's *Florida Interactive Entertainment Academy*. This post marks the first in a series covering the design and development of a rendering abstraction layer for custom game engine written in C++. Since the beginning of 2020, I have designed and developed a [data-driven game engine]({{site.url}}/custom-game-engine/) that uses JSON as a configuration language, and this current project is a continuation of that previous work. I will be posting weekly updates over the next couple of months.
 
 Before explaining exactly what the project entails, first I'll explain the motivation behind this endeavor. After wrapping up the initial engine development towards the end of April, which culminated in the recreation of the battle mode of *Super Bomberman* for the SNES using the engine, I wanted to delve even further engine development. In addition to engine development, I also wished to gain experience with computer graphics, so I decided to double down on a project that ties the two topics together. So what exactly does this project entail?
 
@@ -85,12 +85,19 @@ This project proposes supporting the integration of multiple rendering API into 
 
 ## Progress
 
-Based on the schedule above, I am now into the second week of the timeline. Work has gonna pretty well on refactoring the engine. Previously the game used a hierachical structure based on a World class as the top level object that managed one or more Sectors. Analagous to a level, Sectors were a container class for the fundamental game object in the engine, Entity class objects. Then it went even further, with Entity objects themselves composed of Actions, which were analagous to components with a connotation that they would represent a specific behavior in their update loop, thus the name. The structure looked a bit like this.
+Based on the schedule above, I am now into the second week of the timeline. Work has gonna pretty well on refactoring the engine. Previously the game used a hierachical structure based on a World class as the top level object that managed one or more Sectors. Analagous to a level, Sectors were a container class for the fundamental game object in the engine, Entity class objects. Then it went even further, with Entity objects themselves composed of Actions, which were analagous to components with a connotation that they would represent a specific behavior in their update loop, thus the name.
 
-![Old Hierarchy][{{ site.url }}/assets/images/OldEngineHierarchy.png]
+![Old Ownership Hierarchy](/assets/images/OldEngineHierarchy.png)
+<figcaption class="caption">Old ownership hierarchy.</figcaption>
 
-The new design was simplified and expanded to have everything derived from a shared base game object class, Entity. The Entity class can add, remove, or create child Entity instances. World is a specialized Entity derived class top level game object that manages the GameClock, EventQueue, and WorldState, acting as the root object for a simulation. Since it inherits from Entity, it is capable of managing loading and unloading child Entities as levels. Under the new hierachy, both Sector and the base Action classes were removed, replaced by the single Entity class. This lets Entity form a common base from which all game object's can derive from to be integrated into the game loop, such as the specialized Actions classes. The Actor class is designed to be an Entity with a hierarchical Transform class. The refactored class hierarchy is shown below.
+The new design was simplified and expanded to have everything derived from a shared base game object class, Entity. The Entity class manages it's own properties and can also add, remove, or create child Entity instances. In this way Entity forms a common base from which all game objects can derive from to be integrated into the game loop, such as is done with the specialized Actions classes that add custom behavior to a parent Entity.
 
-![New Hierarchy][{{ site.url }}/assets/images/NewEngineHierarchy.png]
+![New Inheritance Hierarchy](/assets/images/NewEngineInheritanceHierarchy.png)
+<figcaption class="caption">Refactored inheritance hierarchy under Entity base class.</figcaption>
 
-While I am a little behind on finishing testing and implementing the Transform class (getting only a little distracted with thread pools, refactoring the event system, and code cleanup), I am working hard to get back on schedule and I will be back next week with another update! Thanks for reading!
+The ownership structure has thus changed sginificantly due to the new inheritance hierarchy. World is a specialized Entity derived class top level game object that manages the GameClock, EventQueue, and WorldState, acting as the root object for a simulation. Since it inherits from Entity, it is capable of managing loading and unloading child Entities as levels. Under the new hierachy, both Sector and the base Action classes were removed, replaced by the single Entity class. The Actor class is designed to be an Entity with a hierarchical Transform class.
+
+![New Ownership Hierarchy](/assets/images/NewEngineOwnershipHierarchy.png)
+<figcaption class="caption">New ownership hierarchy.</figcaption>
+
+While I am a little behind on finishing testing and implementing the Transform class (getting only a little distracted with thread pools, refactoring the event system, and code cleanup), I am working hard to get back on schedule, and I will be back next week with another update. Thanks for reading!
