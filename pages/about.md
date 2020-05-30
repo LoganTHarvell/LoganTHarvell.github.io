@@ -2,10 +2,11 @@
 title: About
 layout: about
 image: /assets/images/profile.jpg
+permalink: /about/
 ---
 
 ## About Me
-Hello world, or otherwise nerdy voyeur. My name is Logan Harvell. I created this site to collect my musings and tinkerings as a developer.
+Hello world, **Bold test**, or otherwise nerdy voyeur. My name is Logan Harvell. I created this site to collect my musings and tinkerings as a developer.
 
 Before getting into more technical discussion, I would like to talk a bit about myself. I hail from a small city named Orlando located somewhere around the middle of the lovely sunshine state, Florida. So, naturally, I spend many of my days hiding from the sun in front of a screen. I'm a lover of video games, movies, sci-fi/fantasy fiction, anime/manga, and most things from the 90's. Chances are, if you ask me about something relevant to nerd/geek culture, then I will have something to talk to you about and we might have already become friends! However, while I joke about my stints as a cave dweller, as an Eagle Scout, I feel obligated to mention my *other* love of the outdoors. Scandalous! I know. I spent much of my youth going camping, hiking, even scuba diving, and experiencing all the beauty nature has to offer.
 
