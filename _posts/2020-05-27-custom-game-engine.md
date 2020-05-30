@@ -14,7 +14,7 @@ tag:
 
 ## Summary
 
-In January 2020, during the start of my spring semester, this project began as part of the curriculum in the programming track at UCF's *Florida Interactive Entertainment Academy*. I was tasked with designing and implementing a game engine in C++ from the ground up. Starting with fundamental templated container classes mirroring the C++ standard library to a full property-centric runtime type reflection system and a multi-threaded event system. 
+In January 2020, during the start of my spring semester, this project began as part of the curriculum in the programming track at UCF's *Florida Interactive Entertainment Academy*. I was tasked with designing and implementing a game engine in C++ from the ground up. Starting with fundamental templated container classes mirroring the C++ standard library to a full property-centric runtime type reflection system and a multi-threaded event system.
 
 Having always been interested in engine development and systems design, I tackled these tasks head on. Over the course of the semester, I learned a whole lot about engine development. However, there is infinitely more to learn, so I continue to develop this project as a means of exploring engine and systems development further.
 
