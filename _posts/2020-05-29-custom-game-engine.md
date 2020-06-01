@@ -1,9 +1,9 @@
 ---
-title: "Custom Data-Driven Game Engine"
+title: "Data-Driven Game Engine"
 headerImage: false
 author: LoganHarvell
-date: 2020-05-27 20:54
-description: Designing a data-driven game engine in C++.
+date: 2020-05-29 8:19
+description: Designing a custom data-driven game engine in C++.
 layout: post
 category: project
 hidden: true
