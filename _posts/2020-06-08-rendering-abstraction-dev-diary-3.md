@@ -15,12 +15,17 @@ tag:
 
 ## Summary
 
-Welcome! This is now the third entry into the developer diary detailing the creation of a rendering abstraction layer within a custom [data-driven game engine](/custom-game-engine)! If you are new, past entries can be found on my blog or through the links found at the bottom of this post. Importantly, I introduced the structure for an asset management system last week.
+Welcome! This is now the third entry into the developer diary detailing the creation of a rendering abstraction layer within a custom [data-driven game engine](/custom-game-engine)! If you are new, past entries can be found on my blog or through the links found at the bottom of this post. Last week, I introduced a tentative asset pipeline. Today, I will discuss a slightly streamlined design and some of the implementation.
 
 ![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
-<figcaption class="caption">Previous tentative asset pipeline design.</figcaption>
+<figcaption class="caption">Previous asset pipeline design.</figcaption>
 
-With this design in mind, the past week saw a focus shift towards actual implementation. Following along the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) provided by my advisor Dr. Paul Varcholik for the book *Real Time 3D Rendering with DirectX and HLSL*, I added three key pieces to the asset pipeline.
+<div class="breaker"></div>
+
+![New Asset Pipeline](/assets/images/NewAssetManagement.png)
+<figcaption class="caption">New asset pipeline design.</figcaption>
+
+With this design in mind, focus shifted towards implementation. Following along the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) provided by my advisor Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I implemented two key pieces in the asset pipeline and a component for animating a model at runtime.
 
 - `Model`: a class representing physical properties
 - `AssetImporter`: a static class encapsulating functionality for loading assets from a file
@@ -37,8 +42,6 @@ The `Model` class is a composition of supporting classes. A single `Model` may c
 - `AnimationClip`: represents an animation sequence for a model
 - `Bone`: represents a vertex offset within a skeleton of a model used for animation
 - `SceneNode`: represents a node in a weighted hierarchy that makes up the skeleton of a model
-
-A model is capable of
 
 ## Animation
 
