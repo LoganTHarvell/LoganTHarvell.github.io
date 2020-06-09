@@ -121,11 +121,11 @@ With the refactor, the core system was simplified down to a few small main class
 
 Now that the refactor is largely finished, I moved onto learning about asset management systems and the best way to handle the life cycle of models and textures within the engine. After spending some time, I have broken the asset management into what I consider the three main stages: import, runtime, and storage.
 
-![New Ownership Hierarchy](/assets/images/AssetManagement.png)
+![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
 <figcaption class="caption">Tentative asset pipeline.</figcaption>
 
-In this pipeline, assets are imported from common file formats during the import stage using their repective importers. I plan on using SOIL2 for texture importing and ASSIMP for model importing into Texture and Model class instances representing the data. Once both assets are in the game, they will be handed off to the ContentManager. 
+In this pipeline, assets are imported from common file formats during the import stage using their repective importers. I plan on using SOIL2 for texture importing and ASSIMP for model importing into `Texture` and `Model` class instances representing the data. Once both assets are in the game, they will be handed off to the `ContentManager`.
 
-Naturally, the ContextManager will manage the asset pool during the runtime stage, giving references to assets where needed and saving/unloading assets when appropriate. More specifically, models will be able to save and load from a binary asset file format for convenience and efficiency. Textures will just be unloaded.
+Naturally, the ContentManager will manage the asset pool during the runtime stage, giving references to assets where needed and saving/unloading assets when appropriate. More specifically, models will be able to save and load from a binary asset file format for convenience and efficiency. Textures will just be unloaded.
 
-For next week, I will be finishing asset importing and basic texture and model classes. Then I will be researching render and device context management, begining the initial move towards setting up model viewing in-engine for the following week. See you then with another update!
+For next week, I will be finishing asset importing and basic `Texture` and `Model` classes. Then I will be researching render and device context management, beginning the initial move towards setting up model viewing in-engine for the following week. See you then with another update!

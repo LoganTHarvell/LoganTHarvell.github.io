@@ -23,42 +23,42 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 ## Overview
 
 * **Containers**
-  * SList, a templated singly linked list class with support for forward iterators
-  * Vector, similar to std::vector with support for random access iterators
-  * HashMap, similar to std::unordered_map with support for bi-directional iterators
-  * Stack, adaptor class for Vector, represents a basic stack
-  * Datum, a vector class whose type can be determined at runtime through use of a discriminated union
+  * `SList`, a templated singly linked list class with support for forward iterators
+  * `Vector`, similar to `std::vector` with support for random access iterators
+  * `HashMap`, similar to `std::unordered_map` with support for bi-directional iterators
+  * `Stack`, adaptor class for `Vector`, represents a basic stack
+  * `Datum`, a vector class whose type can be determined at runtime through use of a discriminated union
 * **Runtime Type Reflection System**
-  * Custom runtime type information (RTTI) class
-  * Scope, analagous to a property table, using HashMap, Vector, and Datum to store key-data pairs
-  * Attributed, a Scope derived class that supports prescribed attributes (properties)
-  * TypeManager, a singleton that manages type-attribute registration for Attributed derived classes
-  * Factory, a templated implmentation of the abstract factory design pattern
+  * Custom runtime type information (`RTTI`) class
+  * `Scope`, analagous to a property table, using `HashMap`, `Vector`, and `Datum` to store key-data pairs
+  * `Attributed`, a `Scope` derived class that supports prescribed attributes (properties)
+  * `TypeManager`, a singleton that manages type-attribute registration for `Attributed` derived classes
+  * `Factory`, a templated implmentation of the abstract factory design pattern
 * **Generic Parser**
   * Utilizes the chain-of-repsonsibility pattern
-  * Combined with Factory, this enables the engine to be completely data driven
+  * Combined with `Factory`, this enables the engine to be completely data driven
   * Handler for parsing JSON data into the reflection system, enabling JSON as a configuration language
 * **Events**
-  * IEventSubscriber, acts as an interface for classes to observe an Event
-  * EventPublisher, publishes an Event to subscribers
-  * Event, subject that can be subscribed to by IEventSubscriber instances
-    * Derived from EventPublisher
+  * `IEventSubscriber`, acts as an interface for classes to observe an `Event`
+  * `EventPublisher`, publishes an `Event` to subscribers
+  * `Event`, subject that can be subscribed to by `IEventSubscriber` instances
+    * Derived from `EventPublisher`
     * Takes a generic type "payload" as a template parameter
-    * Manages the list of subscribers to the Event
-  * EventQueue, manages the queue of Events, firing an Event as it expires
+    * Manages the list of subscribers to the `Event`
+  * `EventQueue`, manages the queue of events, firing an `Event` as it expires
 * **Core**
-  * Entity, a Attributed derived class thinly wrapping Scope, represents a base level engine object
+  * `Entity`, a `ttributed` derived class thinly wrapping `Scope`, represents a base level engine object
     * All engine classes that wish to be integrated into the core game loop derive from this class
-    * Supports composition through parent and child relationships with other Entity objects
-  * World, a top level Entity class that manages a simulation, a.k.a. a game
-    * Owns the GameClock and the WorldState, which owns reference to GameTime and the EventQueue
+    * Supports composition through parent and child relationships with other `Entity` objects
+  * `World`, a top level `Entity` class that manages a simulation, a.k.a. a game
+    * Owns the `GameClock` and the `WorldState`, which owns reference to `GameTime` and the `EventQueue`
     * Uses the above classes to manage the game loop
-    * Root Entity objects can be added/removed, analagous to loading/unloding a level
-  * "Action" classes, Entity derived classes that grant behavior to their parent class
+    * Root `Entity` objects can be added/removed, analagous to loading/unloding a level
+  * "Action" classes, `Entity` derived classes that grant behavior to their parent class
     * Can be used for any behavior inluding data manipulation and control flow
     * Used with the parser and reflection system to define behavior within JSON
-  * Reaction, a generic implementation of EventSubscriber integrated into the reflection system
-  * Actor, an Entity with with a Transform, supports hieracrchical transforms
+  * `Reaction`, a generic implementation of `EventSubscriber` integrated into the reflection system
+  * `Actor`, an `Entity` with with a `Transform`, supports hieracrchical transforms
 
 <div class="breaker"></div>
 

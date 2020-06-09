@@ -95,12 +95,19 @@ figure.highlight
 
 code,
 tt
-	padding: 1px 0
+	padding: 0.05rem 0.25rem
+	background: $blockcolor
+	border: solid 2px $blockbordercolor
+	border-radius: 4px
 	font-family: $fontMonospace
-	font-size: 1.2rem
 	line-height: 20px
-	background: transparent
-	broder-radius: 2px
+
+figure
+	pre
+		border: solid 2px $blockbordercolor
+		
+		pre
+			border: none
 
 pre
 	box-sizing: border-box
@@ -113,6 +120,11 @@ pre
 	overflow: auto
 	background: $blockcolor
 	color: $alpha
+
+	code, tt
+		background: transparent
+		padding: 1px 0
+		border-width: 0
 
 .wrapper-normal,
 .wrapper-large
