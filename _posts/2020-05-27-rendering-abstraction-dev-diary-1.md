@@ -1,16 +1,17 @@
 ---
-title: "Rendering Abstraction Layer, Dev Diary #1"
 headerImage: false
+title: "Rendering Abstraction Layer, Dev Diary #1"
+series: Rendering Abstraction Layer, Dev Diary
 author: LoganHarvell
 date: 2020-05-27 14:54
-layout: post
-category: blog
 description: Creating a rendering abstraction layer for a custom game engine.
 tag:
 - Dev Diary
 - Rendering
 - Engine
 - C++
+layout: post
+category: blog
 ---
 
 ## Summary
@@ -25,7 +26,7 @@ This project proposes supporting the integration of multiple rendering API into 
 
 An abstraction layer simplifies extending the engine to support specific or multiple different rendering API as needed to best support the end application and target platforms. The end goal of this project is a demonstration of a dynamic scene rendered using the rendering abstraction layer with an implementation first using OpenGL 4.6, and then DirectX11, as a proof-of-concept.
 
-## Tasks Breakdown
+## Task Breakdown
 
 - **Refactoring the engine**
   - Simplifying the current hierarchical system into an World/Entity based system

@@ -1,21 +1,22 @@
 ---
-title: "Rendering Abstraction Layer, Dev Diary #2"
 headerImage: false
+title: "Rendering Abstraction Layer, Dev Diary #2"
+series: Rendering Abstraction Layer, Dev Diary
 author: LoganHarvell
 date: 2020-06-01 14:05
-layout: post
-category: blog
 description: Creating a rendering abstraction layer for a custom game engine.
 tag:
 - Dev Diary
 - Rendering
 - Engine
 - C++
+layout: post
+category: blog
 ---
 
 ## Summary
 
-To repeat guests, welcome back! Otherwise, welcome to the second entry in the dev diary series on developing a rendering abstraction layer for a custom [data-driven game engine](/custom-game-engine) in C++. If you have not read the first entry, then you can find it [here](/rendering-abstraction-dev-diary-1). Last week, I covered a few introductory points, including the project background, motivations, goals, and a rough tasks breakdown and timeline.
+To repeat guests, welcome back! Otherwise, welcome to the second entry in the dev diary series on developing a rendering abstraction layer for a custom [data-driven game engine](/custom-game-engine) in C++. If you have not read the first entry, then you can find it [here](/rendering-abstraction-dev-diary-1). Last week, I covered a few introductory points, including the project background, motivations, goals, and a rough task breakdown and timeline.
 
 ## Progress
 
@@ -119,7 +120,7 @@ With the refactor, the core system was simplified down to a few small main class
 
 ### Asset Management
 
-Now that the refactor is largely finished, I moved onto learning about asset management systems and the best way to handle the life cycle of models and textures within the engine. After spending some time, I have broken the asset management into what I consider the three main stages: import, runtime, and storage.
+Now that the refactor is largely finished, I have moved onto learning about asset management systems and the best way to handle the life cycle of models and textures within the engine. After spending some time, I have broken the asset management into what I consider the three main stages: import, runtime, and storage.
 
 ![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
 <figcaption class="caption">Tentative asset pipeline.</figcaption>

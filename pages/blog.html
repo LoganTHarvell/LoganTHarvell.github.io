@@ -16,9 +16,7 @@ permalink: /blog/
 	{% elsif site.pagination.enabled %}
 		{% for post in paginator.posts %}
 			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
+				{% include blog-post.html %}
 			{% endif %}
 		{% endfor %}
 
@@ -26,9 +24,7 @@ permalink: /blog/
 	{% else %}
 		{% for post in site.posts %}
 			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
+				{% include blog-post.html %}
 			{% endif %}
 		{% endfor %}
 	{% endif %}

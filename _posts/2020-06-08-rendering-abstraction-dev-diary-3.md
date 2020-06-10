@@ -1,16 +1,17 @@
 ---
-title: "Rendering Abstraction Layer, Dev Diary #3"
 headerImage: false
+title: "Rendering Abstraction Layer, Dev Diary #3"
+series: Rendering Abstraction Layer, Dev Diary
 author: LoganHarvell
 date: 2020-06-09 12:28
-layout: post
-category: blog
 description: Creating a rendering abstraction layer for a custom game engine.
 tag:
 - Dev Diary
 - Rendering
 - Engine
 - C++
+layout: post
+category: blog
 ---
 
 ## Summary
@@ -45,7 +46,7 @@ The `Model` class is a composition of supporting classes. A single `Model` may c
 
 ## Animation
 
-Animation was something that I originally planned on integrating into the engine much later. However, since it was closely related to a model and had its own requirements during import, the `Model` class was implemented to support data structures related to animation.
+Animation was something that I had originally planned on integrating into the engine much later. However, since it was closely related to a model and had its own requirements during import, the `Model` class was implemented to support data structures related to animation.
 
 Briefly described above, each model may contain a set of `AnimationClip` instances and sets of `Bone` and `SceneNode` instances that make up the skeleton of a model. Going deeper, each `AnimationClip` contains a series of `BoneAnimation` instances, which stores the `Keyframe` instances associated with a `Bone`, and a `Keyframe` cotains the transformation information for a Bone at a given timestamp.
 
@@ -53,7 +54,7 @@ To play these animations, I created the `AnimatorComponent` class, a component c
 
 ## Asset Importer
 
-With a fleshed out `Model` class, I then moved onto the creation of an `AssetImporter` class capable of loading a model from any of the dozens of file formats supported by [ASSIMP](https://github.com/assimp/assimp). The `AssetImporter` class provides a single `Load()` function for loading models, but this is broken down behind the scenes into steps for loading the meshes, model materials, and animation clips.
+With a fleshed out `Model` class, I then moved onto the creation of an `AssetImporter` class capable of loading a model from any of the dozens of file formats supported by [Open Asset Import Library (ASSIMP)](https://github.com/assimp/assimp). The `AssetImporter` class provides a single `Load()` function for loading models, but this is broken down behind the scenes into steps for loading the meshes, model materials, and animation clips.
 
 ## Next Steps
 

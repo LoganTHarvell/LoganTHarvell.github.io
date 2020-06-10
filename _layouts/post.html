@@ -23,15 +23,35 @@ layout: page
 
 {{content}}
 
-{% if site.post-advance-links contains page.category %}
+{% if page.series %}
     <div class="blog-navigation">
-        {% if page.previous.hidden == false and page.previous.url %}
-            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+        {% assign posts = site.categories[page.category] | where: "series", page.series %}
+        
+        {% for post in posts %}
+          {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+          {% endif %}
+        {% endfor %}
+        {% for post in posts %}
+          {% if post_index0 == forloop.index %}
+            {% assign next_post = post %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post %}
+          {% endif %}
+          {% if next_post != nil and prev_post != nil %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if prev_post.url %}
+            <a class="prev" href="{{ site.url }}{{ prev_post.url }}">&laquo; {{ prev_post.title }}</a>
         {% else %}
             <a class="prev"></a>
         {% endif %}
-        {% if page.next.hidden == false and page.next.url %}
-            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+        {% if next_post.url %}
+            <a class="next" href="{{ site.url }}{{ next_post.url }}">{{ next_post.title }} &raquo;</a>
         {% endif %}
     </div>
 {% endif %}

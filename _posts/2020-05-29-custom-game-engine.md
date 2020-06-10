@@ -1,15 +1,14 @@
 ---
-title: "Data-Driven Game Engine"
 headerImage: false
+title: "Data-Driven Game Engine"
 author: LoganHarvell
 date: 2020-05-29 8:19
 description: Designing a custom data-driven game engine in C++.
-layout: post
-category: project
-hidden: true
 tag:
 - Engine
 - C++
+layout: post
+category: project
 ---
 
 ## Summary
@@ -18,7 +17,7 @@ In January 2020, during the start of my spring semester, this project began as p
 
 Having always been interested in engine development and systems design, I tackled these tasks head on. Over the course of the semester, I learned a whole lot about engine development. However, there is infinitely more to learn, so I continue to develop this project as a means of exploring engine and systems development further.
 
-As of May 2020, I have begun work on a rendering abstraction layer for the engine with the intention of enabling support for multiple rendering API. The abstraction layer will act as an interface for rendering functionality that could then be implemented by any rendering API, i.e. OpenGL, Vulkan, DirectX11, DirectX12, and Metal, as needed to best support the developed application and it's target platforms. You can read more about this in the weekly developer diary blog series startin with the first post [here](/rendering-abstraction-dev-diary-1).
+As of May 2020, I have begun work on a rendering abstraction layer for the engine with the intention of enabling support for multiple rendering API. The abstraction layer will act as an interface for rendering functionality that could then be implemented by any rendering API, i.e. OpenGL, Vulkan, DirectX11, DirectX12, and Metal, as needed to best support the developed application and it's target platforms. You can read more about this in the weekly developer diary blog series starting with the first post [here](/rendering-abstraction-dev-diary-1).
 
 ## Overview
 
@@ -29,7 +28,7 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
   * `Stack`, adaptor class for `Vector`, represents a basic stack
   * `Datum`, a vector class whose type can be determined at runtime through use of a discriminated union
 * **Runtime Type Reflection System**
-  * Custom runtime type information (`RTTI`) class
+  * `RTTI`, a custom base class for runtime type information
   * `Scope`, analagous to a property table, using `HashMap`, `Vector`, and `Datum` to store key-data pairs
   * `Attributed`, a `Scope` derived class that supports prescribed attributes (properties)
   * `TypeManager`, a singleton that manages type-attribute registration for `Attributed` derived classes
@@ -58,7 +57,7 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
     * Can be used for any behavior inluding data manipulation and control flow
     * Used with the parser and reflection system to define behavior within JSON
   * `Reaction`, a generic implementation of `EventSubscriber` integrated into the reflection system
-  * `Actor`, an `Entity` with with a `Transform`, supports hieracrchical transforms
+  * `Actor`, an `Entity` with a `Transform`, supports hieracrchical transforms
 
 <div class="breaker"></div>
 
@@ -72,6 +71,6 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 
 ## Goals
 
-After wrapping up the initial engine development towards the end of April 2020, the first major milestone for the engine was marked by it's use in the recreation of the battle mode of *Super Bomberman* for the SNES.
+After wrapping up the initial engine development towards the end of April 2020, the first major milestone for the engine was marked by its use in the recreation of the battle mode of *Super Bomberman* for the SNES.
 
 The next goal of this project will be the culmination of the current work on a rendering abstraction layer for the engine. This is planned as a visual demonstration of a dynamic scene rendered using the rendering abstraction layer with an implementation both in OpenGL 4.6 and DirectX11 as a proof-of-concept.
