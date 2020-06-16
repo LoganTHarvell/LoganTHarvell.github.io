@@ -26,7 +26,7 @@ Welcome! This is now the third entry into the developer diary detailing the crea
 ![New Asset Pipeline](/assets/images/NewAssetManagement.png)
 <figcaption class="caption">New asset pipeline design.</figcaption>
 
-With this design in mind, focus shifted towards implementation. Following along the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) provided by my advisor Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I implemented two key pieces in the asset pipeline and a component for animating a model at runtime.
+With this design in mind, focus shifted towards implementation. Following along the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) provided by my advisor, Dr. Paul Varcholik, for his book *Real Time 3D Rendering with DirectX and HLSL*, I implemented two key pieces in the asset pipeline and a component for animating a model at runtime.
 
 - `Model`: a class representing physical properties
 - `AssetImporter`: a static class encapsulating functionality for loading assets from a file
