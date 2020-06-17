@@ -138,7 +138,7 @@ Finally, each solar body had configurable properties exposed to the reflection s
 
 ## Reworked Transform Class
 
-To support the hierarchical nature of the solar system, the `Transform` class was completely reworked. Previously, the class was mainly a wrapper for a OpenGL Mathematics (glm) matrix. However, this made it difficult and inefficient to break the transform class into its separate components, translation, rotation, and scale.
+To support the hierarchical nature of the solar system, the `Transform` class was completely reworked. Previously, the class was mainly a wrapper for a OpenGL Mathematics matrix (glm::mat4x4). However, this made it difficult and inefficient to break the transform class into its separate components, translation, rotation, and scale.
 
 So, to solve this, the class now stores these components:
 
@@ -161,6 +161,9 @@ As the initial implementation, I created the `RenderingManager` class as an inte
 Then I created `RenderingManager_DirectX11`, as a derived class from `RenderingManager` that implements the structs and pure virtual methods using DirectX11 data types and functions. This derived class is then only defined with the corresponding preproccessor defintion, preventing the need for DirectX11 support in programs that cannot or do not wish to include it.
 
 In practice, this allowed for the `World` class to maintain a reference to the current `RenderingManager` instance. This can then be passed within the `WorldState` instance down through the `Entity` hierarchy, enabling components to access the rendering interface without dependencies on DirectX11.
+
+![Rendering Manager](/assets/images/RenderingManager.png)
+<figcaption class="caption">Rendering Manager design.</figcaption>
 
 ## Next Steps
 
