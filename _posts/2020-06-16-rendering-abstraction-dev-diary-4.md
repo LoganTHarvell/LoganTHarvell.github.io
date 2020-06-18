@@ -16,7 +16,7 @@ category: blog
 
 ## Summary
 
-Welcome to the fourth entry following the creation of a rendering abstraction layer within a custom [data-driven game engine](/custom-game-engine)! Past entries can be found on my blog or through the links found at the bottom of this post.
+Welcome to the fourth entry following the creation of a rendering abstraction layer within a custom [data-driven game engine](/fiea-game-engine)! Past entries can be found on my blog or through the links found at the bottom of this post.
 
 As a reminder, in the last entry, I described my initial implementation of an asset management pipeline, including an implementation of a `Model` class that represents the physical properties of an `Entity` object in my engine and a `Transform` class to support it. This past week saw those implementations put to the test as I demonstrated rendering the solar system within the engine using DirectX11.
 

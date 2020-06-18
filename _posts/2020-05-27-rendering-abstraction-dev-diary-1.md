@@ -16,7 +16,7 @@ category: blog
 
 ## Summary
 
-Hello and welcome! This post marks the first in a series covering the design and development of a rendering abstraction layer for a custom game engine written in C++. Since the beginning of 2020, I have designed and developed a [data-driven game engine]({{site.url}}/custom-game-engine/), and this current project is a continuation of that previous work. I will be posting weekly updates over the next couple of months.
+Hello and welcome! This post marks the first in a series covering the design and development of a rendering abstraction layer for a custom game engine written in C++. Since the beginning of 2020, I have designed and developed a [data-driven game engine]({{site.url}}/fiea-game-engine/), and this current project is a continuation of that previous work. I will be posting weekly updates over the next couple of months.
 
 Before explaining exactly what the project entails, first I'll explain the motivation behind this endeavor. After wrapping up the initial engine development towards the end of April, which culminated in the recreation of the battle mode of *Super Bomberman* for the SNES using the engine, I wanted to delve even further into engine development. However, in addition to engine development, I also wished to gain more experience with computer graphics, so I decided to double down on a project that ties the two topics together. So what exactly does this project entail?
 

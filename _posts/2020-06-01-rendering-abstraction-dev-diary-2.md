@@ -16,7 +16,7 @@ category: blog
 
 ## Summary
 
-To repeat guests, welcome back! Otherwise, welcome to the second entry in the dev diary series on developing a rendering abstraction layer for a custom [data-driven game engine](/custom-game-engine) in C++. If you have not read the first entry, then you can find it [here](/rendering-abstraction-dev-diary-1). Last week, I covered a few introductory points, including the project background, motivations, goals, and a rough task breakdown and timeline.
+To repeat guests, welcome back! Otherwise, welcome to the second entry in the dev diary series on developing a rendering abstraction layer for a custom [data-driven game engine](/fiea-game-engine) in C++. If you have not read the first entry, then you can find it [here](/rendering-abstraction-dev-diary-1). Last week, I covered a few introductory points, including the project background, motivations, goals, and a rough task breakdown and timeline.
 
 ## Progress
 

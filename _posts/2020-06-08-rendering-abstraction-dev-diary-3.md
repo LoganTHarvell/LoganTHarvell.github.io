@@ -16,7 +16,7 @@ category: blog
 
 ## Summary
 
-Welcome! This is now the third entry into the developer diary detailing the creation of a rendering abstraction layer within a custom [data-driven game engine](/custom-game-engine)! If you are new, past entries can be found on my blog or through the links found at the bottom of this post. Last week, I introduced a tentative asset pipeline. Today, I will discuss a slightly streamlined design and some of the implementation.
+Welcome! This is now the third entry into the developer diary detailing the creation of a rendering abstraction layer within a custom [data-driven game engine](/fiea-game-engine)! If you are new, past entries can be found on my blog or through the links found at the bottom of this post. Last week, I introduced a tentative asset pipeline. Today, I will discuss a slightly streamlined design and some of the implementation.
 
 ![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
 <figcaption class="caption">Previous asset pipeline design.</figcaption>
