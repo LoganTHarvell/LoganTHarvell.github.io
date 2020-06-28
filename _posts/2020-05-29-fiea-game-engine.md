@@ -86,6 +86,6 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 
 After wrapping up the initial engine development towards the end of April 2020, the first major milestone for the engine was marked by its use in the recreation of the battle mode of *Super Bomberman* for the SNES.
 
-{% include youTubePlayer.html id=page.youTubeId %}
+{% include youTube.html id=page.youTubeId %}
 
 The next goal of this project will be the culmination of the current work on a rendering abstraction layer for the engine. This is planned as a visual demonstration of a dynamic scene rendered using the rendering abstraction layer with an implementation both in OpenGL 4.6 and DirectX11 as a proof-of-concept.

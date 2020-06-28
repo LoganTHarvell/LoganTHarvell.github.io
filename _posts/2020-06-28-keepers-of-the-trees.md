@@ -18,7 +18,7 @@ youTubeIdRespawnSystem: 'yAitmTnNeNc'
 youTubeIdCheckpointSystem: '8W__dI7S2Ho'
 ---
 
-{% include youTubePlayer.html id=page.youTubeId %}
+{% include youTube.html id=page.youTubeId %}
 
 ## What is Keepers of the Trees?
 
@@ -75,7 +75,7 @@ I also provided camera trigger volumes, that enabled camera orientation transiti
 
 I also developed an offscreen player indicator mechanic to help the players find each other if they end up outside the camera view.
 
-{% include youTubePlayer.html id=page.youTubeIdPlayerIndicator %}
+{% include youTube.html id=page.youTubeIdPlayerIndicator %}
 
 #### Camera Options
 
@@ -130,8 +130,8 @@ If you want to change the rotation or position of the camera, you simply move th
 
 Lastly, I also conceived a respawn and checkpoint system that would be best suited for a local co-op game and camera system. Inspired by LittleBigPlanet, our respawn system allows for a player to die, but not immediately be respawned.
 
-{% include youTubePlayer.html id=page.youTubeIdRespawnSystem %}
+{% include youTube.html id=page.youTubeIdRespawnSystem %}
 
 Instead, in order to bring their partner back, the surviving player can either continue on potentially reaching the next checkpoint, or backtrack to the last checkpoint passed. Of course when both players die, the players will simply respawn together at the currently active checkpoint. This ensures that the players will always respawn near each other, preventing camera breaking issues when players respawned far off screen.
 
-{% include youTubePlayer.html id=page.youTubeIdCheckpointSystem %}
+{% include youTube.html id=page.youTubeIdCheckpointSystem %}
