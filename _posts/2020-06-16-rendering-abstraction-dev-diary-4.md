@@ -154,13 +154,13 @@ By maintaining the inner matrix as a cache that stores the result of the last ma
 
 ## Rendering API Interface
 
-With the integration of the rendering framework from the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) created by Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I reached the point where the initial implmentation of rendering abstraction was needed to prevent dependencies on DirectX in the API agnostic engine code.
+With the integration of the rendering framework from the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) created by Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I reached the point where the initial implmentation of the rendering abstraction layer was needed to prevent dependencies on DirectX in API agnostic engine code.
 
 As the initial implementation, I created the `RenderingManager` class as an interface that declares structs and pure virtual method prototypes for wrapping rendering API data types and functionality respectively.
 
-Then I created `RenderingManager_DirectX11`, as a derived class from `RenderingManager` that implements the structs and pure virtual methods using DirectX11 data types and functions. This derived class is then only defined with the corresponding preproccessor defintion, preventing the need for DirectX11 support in programs that cannot or do not wish to include it.
+Then I created `RenderingManager_DirectX11`, as a derived class from `RenderingManager` that implements the structs and pure virtual methods using DirectX11 data types and functions. This derived class is then defined alongside a corresponding preprocessor definition, preventing the need for DirectX11 support in programs that cannot, or do not, wish to include it.
 
-In practice, this allowed for the `World` class to maintain a reference to the current `RenderingManager` instance. This can then be passed within the `WorldState` instance down through the `Entity` hierarchy, enabling components to access the rendering interface without dependencies on DirectX11.
+In practice, this allows for the `World` class to maintain a reference to the current `RenderingManager` instance. This reference can then be passed within the `WorldState` down the `Entity` hierarchy, enabling components to access the rendering interface without dependencies on DirectX.
 
 ![Rendering Manager](/assets/images/RenderingManager.png)
 <figcaption class="caption">Rendering Manager design.</figcaption>
