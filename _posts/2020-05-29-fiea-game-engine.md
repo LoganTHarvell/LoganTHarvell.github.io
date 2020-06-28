@@ -9,7 +9,7 @@ tag:
 - C++
 layout: post
 category: project
-youtubeId: Q54NgtNZpVE
+youTubeId: Q54NgtNZpVE
 ---
 
 ## Summary
@@ -32,12 +32,12 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
   * `Datum`, a vector class whose type can be determined at runtime through use of a discriminated union
 * **Runtime Type Reflection System**
   * `RTTI`, a custom base class for runtime type information
-  * `Scope`, analagous to a property table, using `HashMap`, `Vector`, and `Datum` to store key-data pairs
+  * `Scope`, analogous to a property table, using `HashMap`, `Vector`, and `Datum` to store key-data pairs
   * `Attributed`, a `Scope` derived class that supports prescribed attributes (properties)
   * `TypeManager`, a singleton that manages type-attribute registration for `Attributed` derived classes
-  * `Factory`, a templated implmentation of the abstract factory design pattern
+  * `Factory`, a templated implementation of the abstract factory design pattern
 * **Generic Parser**
-  * Utilizes the chain-of-repsonsibility pattern
+  * Utilizes the chain-of-responsibility pattern
   * Combined with `Factory`, this enables the engine to be completely data driven
   * Handler for parsing JSON data into the reflection system, enabling JSON as a configuration language
 * **Events**
@@ -55,7 +55,7 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
   * `World`, a top level `Entity` class that manages a simulation, a.k.a. a game
     * Owns the `GameClock` and the `WorldState`, which owns reference to `GameTime` and the `EventQueue`
     * Uses the above classes to manage the game loop
-    * Root `Entity` objects can be added/removed, analagous to loading/unloding a level
+    * Root `Entity` objects can be added/removed, analogous to loading/unloading a level
   * `Reaction`, a generic implementation of `IEventSubscriber` integrated into the reflection system
 * **Math**
   * `Transform`, represents position and orientation transformations of an object in 3D space
@@ -63,13 +63,13 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 ### Engine
 
 * **Entities**
-  * `Actor`, an `Entity` with a `Transform`, supports hieracrchical transforms
+  * `Actor`, an `Entity` with a `Transform`, supports hierarchical transforms
 * **Components**
-  * `Model`, represents the physcial attributes, can be loaded from a 3D model
+  * `Model`, represents the physical attributes, can be loaded from a 3D model
   * `AnimatorComponent`, manages playing animations
 * **Actions**
   * Several `Entity` derived classes that grant behavior to their parent class
-  * Can be used for any behavior inluding data manipulation and control flow
+  * Can be used for any behavior including data manipulation and control flow
   * Used with the parser and reflection system to define behavior within JSON
 
 <div class="breaker"></div>
@@ -86,6 +86,6 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 
 After wrapping up the initial engine development towards the end of April 2020, the first major milestone for the engine was marked by its use in the recreation of the battle mode of *Super Bomberman* for the SNES.
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youTubePlayer.html id=page.youTubeId %}
 
 The next goal of this project will be the culmination of the current work on a rendering abstraction layer for the engine. This is planned as a visual demonstration of a dynamic scene rendered using the rendering abstraction layer with an implementation both in OpenGL 4.6 and DirectX11 as a proof-of-concept.

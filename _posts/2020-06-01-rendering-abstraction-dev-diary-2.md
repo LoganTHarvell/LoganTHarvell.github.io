@@ -20,14 +20,14 @@ To repeat guests, welcome back! Otherwise, welcome to the second entry in the de
 
 ## Progress
 
-If you have been following along, then you will remember that last week saw a major rework of the game engine core, dubbed the Entity system. This week saw finishing touches to the tests and a rework of the parsing system to better handle the new refactor, as the data-driven nature of the game engine relies on the ability to use JSON as a configuration language using a generic JSON parser and handlers based on the chain-of-responsibility pattern. Additionaly, I spent a fair amount of time researching the interface for asset management of models and textures within the engine in lieu of the briefly delayed initial transform class implementation.
+If you have been following along, then you will remember that last week saw a major rework of the game engine core, dubbed the Entity system. This week saw finishing touches to the tests and a rework of the parsing system to better handle the new refactor, as the data-driven nature of the game engine relies on the ability to use JSON as a configuration language using a generic JSON parser and handlers based on the chain-of-responsibility pattern. Additionally, I spent a fair amount of time researching the interface for asset management of models and textures within the engine in lieu of the briefly delayed initial transform class implementation.
 
 ### Refactored Parser
 
 ![Old Ownership Hierarchy](/assets/images/OldEngineHierarchy.png)
 <figcaption class="caption">Old ownership hierarchy.</figcaption>
 
-Previously, the core system of the engine was tied to four largely redundant layers of separate classes linked together through a linear chain of ownership. Due to this, the common base for the separete layers fell on the reflection system. However, this felt clunky with each layer holding a name attribute that had to be parsed in addition to the name of attribute to which the object belonged, shown below.
+Previously, the core system of the engine was tied to four largely redundant layers of separate classes linked together through a linear chain of ownership. Due to this, the common base for the separate layers fell on the reflection system. However, this felt clunky with each layer holding a name attribute that had to be parsed in addition to the name of attribute to which the object belonged, shown below.
 
 {% highlight json linenos %}
 {
@@ -88,7 +88,7 @@ Previously, the core system of the engine was tied to four largely redundant lay
 ![New Ownership Hierarchy](/assets/images/NewEngineOwnershipHierarchy.png)
 <figcaption class="caption">Refactored ownership hierarchy.</figcaption>
 
-With the refactor, the core system was simplified down to a few small main classes all dervied from a single base Entity class that maintains a set of child Entity-derived class instances directly within its attribute mappings. Due to this flatter structure and using the attribute key to replace the previous redundant name attribute, I was able to greatly shorten the JSON syntax and increase readability, shown below.
+With the refactor, the core system was simplified down to a few small main classes all derived from a single base Entity class that maintains a set of child Entity-derived class instances directly within its attribute mappings. Due to this flatter structure and using the attribute key to replace the previous redundant name attribute, I was able to greatly shorten the JSON syntax and increase readability, shown below.
 
 {% highlight json linenos %}
 {
@@ -125,7 +125,7 @@ Now that the refactor is largely finished, I have moved onto learning about asse
 ![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
 <figcaption class="caption">Tentative asset pipeline.</figcaption>
 
-In this pipeline, assets are imported from common file formats during the import stage using their repective importers. I plan on using SOIL2 for texture importing and ASSIMP for model importing into `Texture` and `Model` class instances representing the data. Once both assets are in the game, they will be handed off to the `ContentManager`.
+In this pipeline, assets are imported from common file formats during the import stage using their respective importers. I plan on using SOIL2 for texture importing and ASSIMP for model importing into `Texture` and `Model` class instances representing the data. Once both assets are in the game, they will be handed off to the `ContentManager`.
 
 Naturally, the ContentManager will manage the asset pool during the runtime stage, giving references to assets where needed and saving/unloading assets when appropriate. More specifically, models will be able to save and load from a binary asset file format for convenience and efficiency. Textures will just be unloaded.
 

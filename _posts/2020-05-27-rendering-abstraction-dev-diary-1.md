@@ -88,7 +88,7 @@ An abstraction layer simplifies extending the engine to support specific or mult
 
 ## Progress
 
-Based on the schedule above, I am now into the second week of the timeline. Work has gonna pretty well on refactoring the engine. Previously the game used a hierachical structure based on a `World` class as the top level object that managed one or more Sectors. Analagous to a level, Sectors were a container class for the fundamental game object in the engine, `Entity` class objects. Then it went even further, with `Entity` objects themselves composed of Actions, which were analagous to components with a connotation that they would represent a specific behavior in their update loop, thus the name.
+Based on the schedule above, I am now into the second week of the timeline. Work has gonna pretty well on refactoring the engine. Previously the game used a hierarchical structure based on a `World` class as the top level object that managed one or more Sectors. Analogous to a level, Sectors were a container class for the fundamental game object in the engine, `Entity` class objects. Then it went even further, with `Entity` objects themselves composed of Actions, which were analogous to components with a connotation that they would represent a specific behavior in their update loop, thus the name.
 
 ![Old Ownership Hierarchy](/assets/images/OldEngineHierarchy.png)
 <figcaption class="caption">Old ownership hierarchy.</figcaption>
@@ -98,9 +98,9 @@ The new design was simplified and expanded to have everything derived from a sha
 ![New Inheritance Hierarchy](/assets/images/NewEngineInheritanceHierarchy.png)
 <figcaption class="caption">Refactored inheritance hierarchy under Entity base class.</figcaption>
 
-Thus, the ownership structure has changed significantly due to the new inheritance hierarchy. The World is now a specialized `Entity` derived class. It is a top level game object that manages the GameClock, `EventQueue`, and `WorldState`, acting as the root object for a simulation. Since it inherits from `Entity`, it is also capable of managing loading and unloading child `Entity` instances, similiar to how one would load and unload levels or scenes.
+Thus, the ownership structure has changed significantly due to the new inheritance hierarchy. The World is now a specialized `Entity` derived class. It is a top level game object that manages the GameClock, `EventQueue`, and `WorldState`, acting as the root object for a simulation. Since it inherits from `Entity`, it is also capable of managing loading and unloading child `Entity` instances, similar to how one would load and unload levels or scenes.
 
-Under this new hierachy, both Sector and the base `Action` classes were removed, replaced by the single `Entity`, while all previous "Action" classes were converted to derive from Entity instead. The only new class that was introduced, is an `Actor` class. This new class is simply an Entity with a `Transform` class to support a hierarchical transform system.
+Under this new hierarchy, both Sector and the base `Action` classes were removed, replaced by the single `Entity`, while all previous "Action" classes were converted to derive from Entity instead. The only new class that was introduced, is an `Actor` class. This new class is simply an Entity with a `Transform` class to support a hierarchical transform system.
 
 ![New Ownership Hierarchy](/assets/images/NewEngineOwnershipHierarchy.png)
 <figcaption class="caption">New ownership hierarchy.</figcaption>

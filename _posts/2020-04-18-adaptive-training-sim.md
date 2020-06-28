@@ -21,7 +21,7 @@ The adaptive training simulator is a prototype driving simulator where players d
 
 The project was created for the Federal Law Enforcement Training Center (FLETC) and developed by an external team of seven people using Unreal Engine 4 (UE4). Its purpose was to serve as a proof-of-concept for an adaptive training simulator that could utilize biometric feedback provided by proprietary hardware to allow for difficulty conditions to be adjusted during a session.
 
-In this case, difficulty conditions would be controlled by three values sent over a TCP connection by researchers who would be tracking the biometric data live from a trainig subject. Specifically, the prototype had three conditions affecting difficulty, one each for testing overload in the three key testing areas.
+In this case, difficulty conditions would be controlled by three values sent over a TCP connection by researchers who would be tracking the biometric data live from a training subject. Specifically, the prototype had three conditions affecting difficulty, one each for testing overload in the three key testing areas.
 
 - Visual, using increasing levels of rain to obscure visibility of the road
 - Auditory, using increasing levels of radio static to hinder the ability to hear the police chatter cues

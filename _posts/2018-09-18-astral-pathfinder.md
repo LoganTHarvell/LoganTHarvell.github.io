@@ -30,7 +30,7 @@ By Spring 2018, the project was entirely reinvented from scratch as a [real-time
 ![New Ownership Hierarchy](/assets/images/AstralPathfinder/Menu.png)
 <figcaption class="caption">Astral Pathfinder.</figcaption>
 
-As the creator of the project, I handled conception and design and acted as the project lead, responsible for managing, planning, and writing documentation for Astral Pathfinder. As a developer, I worked on data structures, logic, and aritficial intelligence, and wrote most of the supporting engine, including an interface created to use Lua as a configuration language for data-driven development.
+As the creator of the project, I handled conception and design and acted as the project lead, responsible for managing, planning, and writing documentation for Astral Pathfinder. As a developer, I worked on data structures, logic, and artificial intelligence, and wrote most of the supporting engine, including an interface created to use Lua as a configuration language for data-driven development.
 
 ![New Ownership Hierarchy](/assets/images/AstralPathfinder/Gameplay.png)
 <figcaption class="caption">Real-time gameplay.</figcaption>

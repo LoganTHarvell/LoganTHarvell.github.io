@@ -12,17 +12,17 @@ tag:
 layout: post
 category: project
 
-youtubeId: 'M7K7ZyslLG0?start=482'
-youtubeIdPlayerIndicator: 'sQf0BMf7oAE'
-youtubeIdRespawnSystem: 'yAitmTnNeNc'
-youtubeIdCheckpointSystem: '8W__dI7S2Ho'
+youTubeId: 'M7K7ZyslLG0?start=482'
+youTubeIdPlayerIndicator: 'sQf0BMf7oAE'
+youTubeIdRespawnSystem: 'yAitmTnNeNc'
+youTubeIdCheckpointSystem: '8W__dI7S2Ho'
 ---
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youTubePlayer.html id=page.youTubeId %}
 
 ## What is Keepers of the Trees?
 
-*Keepers of the Trees* is a local co-op puzzle platformer being developed by Studio Chili for release on Steam August 7th, 2020. It is set in a fantastical forest where two curious little Keepers explore, growing and de-growing plants to their adavantage while they go on their adventures.
+*Keepers of the Trees* is a local co-op puzzle platformer being developed by Studio Chili for release on Steam August 7th, 2020. It is set in a fantastical forest where two curious little Keepers explore, growing and de-growing plants to their advantage while they go on their adventures.
 
 ![KeepersLog](/assets/images/KeepersOfTheTrees/KeepersLog.jpg)
 <figcaption class="caption">The Keepers</figcaption>
@@ -32,11 +32,11 @@ If you would like to have follow along with updates for the game, you can follow
 ## Studio Chili
 
 <div class="side-by-side">
-    <div class="toleft">
+    <div class="toLeft">
         <img class="image" src="/assets/images/KeepersOfTheTrees/StudioChili.jpg" alt="Studio Chili Logo">
     </div>
 
-    <div class="toright">
+    <div class="toRight">
         <p>Studio Chili was founded December 2019 by a group of graduate students at the <em>Florida Interactive Entertainment Academy</em> comprising a diverse group of producers, designers, artists, and programmers.</p>
 
         <p>In total, our team have grown to 23 talented developers led by our project lead, Samuel Roberts. Our leadership team includes Brenan Wayland for design, Austin Labarbera for art, myself for programming, and Dennis Yelito as our production manager.</p>
@@ -45,22 +45,22 @@ If you would like to have follow along with updates for the game, you can follow
 
 ## Responsibilities
 
-As the lead programmer, I oversee the design of the architecture and system design, manage my fellow programmers, and support interdisciplinary collaboration between departments with my fellow leads on the team. For the programmers, I handle assigning tasks and perform weekly reviews to ensure the project continues smooth.
+As the lead programmer, I oversee the game architecture and system design, manage my fellow programmers, and support interdisciplinary collaboration between departments with my fellow leads on the team. For the programmers, I handle assigning tasks and perform weekly reviews to ensure the project continues smooth.
 
-However, while the lead programmer on the project, I still like to get my hands dirty. I personally developed the implementations for both a flexible co-co camera system and a checkpoint-based respawn system for *Keeepers of the Trees*, as well as the player manager system that supports them.
+However, while the lead programmer on the project, I still like to get my hands dirty. I personally developed the implementations for both a flexible co-co camera system and a checkpoint-based respawn system for *Keepers of the Trees*, as well as the player manager system that supports them.
 
 ### Core Game Design
 
-*Keepers of the Trees* is two player game focused on interacting with the environment, particulary a set of plants with unique properties that each player has to grow or de-grow in order to solve puzzles. Thus, the architecture for our game was designed for flexibility, with the player class and interactable classes composed of matching components on each side of an interaction. This enabled plant behavior to be adjusted on easily by just adding and removing components for the desired behavior.
+*Keepers of the Trees* is two player game focused on interacting with the environment, particularly a set of plants with unique properties that each player has to grow or de-grow in order to solve puzzles. Thus, the architecture for our game was designed for flexibility, with the player and interactable classes composed of matching components on each side of an interaction. This enabled plant behavior to be adjusted on easily by just adding and removing components for the desired behavior.
 
 ![ClassComponents](/assets/images/KeepersOfTheTrees/BaseClassDiagram.png)
-<figcaption class="caption">Player-Interactable class compoenents</figcaption>
+<figcaption class="caption">Player-Interactable class components</figcaption>
 
 ### Designing a Flexible Co-Op Camera System
 
-Being a local co-op game, a traditional third person camera was not quite suitable for our needs. Like almost any game, the camera is one of the most critical gameplay elements. Letting players have simulataneous control over the single camera would only be frustrating to deal with, and the same would be true if only one player had camera control.
+Being a local co-op game, a traditional third person camera was not quite suitable for our needs. Like almost any game, the camera is one of the most critical gameplay elements. Letting players have simultaneous control over the single camera would only be frustrating to deal with, and the same would be true if only one player had camera control.
 
-To solve this problem I designed and developed a flexible camera system with our specific needs in mind. Specifically, I enabled the camera to track the average positon of the player and maintain a set distance away with a fixed orientation.
+To solve this problem I designed and developed a flexible camera system with our specific needs in mind. Specifically, I enabled the camera to track the average position of the player and maintain a set distance away with a fixed orientation.
 
 ![Co-op Camera](/assets/images/KeepersOfTheTrees/camera.gif)
 <figcaption class="caption">Co-op camera initial implementation</figcaption>
@@ -75,7 +75,7 @@ I also provided camera trigger volumes, that enabled camera orientation transiti
 
 I also developed an offscreen player indicator mechanic to help the players find each other if they end up outside the camera view.
 
-{% include youtubePlayer.html id=page.youtubeIdPlayerIndicator %}
+{% include youTubePlayer.html id=page.youTubeIdPlayerIndicator %}
 
 #### Camera Options
 
@@ -130,8 +130,8 @@ If you want to change the rotation or position of the camera, you simply move th
 
 Lastly, I also conceived a respawn and checkpoint system that would be best suited for a local co-op game and camera system. Inspired by LittleBigPlanet, our respawn system allows for a player to die, but not immediately be respawned.
 
-{% include youtubePlayer.html id=page.youtubeIdRespawnSystem %}
+{% include youTubePlayer.html id=page.youTubeIdRespawnSystem %}
 
 Instead, in order to bring their partner back, the surviving player can either continue on potentially reaching the next checkpoint, or backtrack to the last checkpoint passed. Of course when both players die, the players will simply respawn together at the currently active checkpoint. This ensures that the players will always respawn near each other, preventing camera breaking issues when players respawned far off screen.
 
-{% include youtubePlayer.html id=page.youtubeIdCheckpointSystem %}
+{% include youTubePlayer.html id=page.youTubeIdCheckpointSystem %}

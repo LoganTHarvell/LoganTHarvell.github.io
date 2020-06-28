@@ -33,7 +33,7 @@ With this design in mind, focus shifted towards implementation. Following along 
 - `AnimatorComponent`: a component class for animating a model at runtime
 
 To support these additions, I also implemented a Transform class that wraps a matrix representing 3D spatial transformations that utilizes [OpenGL Mathematics (glm)](https://glm.g-truc.net/0.9.9/index.html).
-  
+
 ## Model Class
 
 The `Model` class is a composition of supporting classes. A single `Model` may contain one or many of each of these elements. These classes include:
@@ -48,7 +48,7 @@ The `Model` class is a composition of supporting classes. A single `Model` may c
 
 Animation was something that I had originally planned on integrating into the engine much later. However, since it was closely related to a model and had its own requirements during import, the `Model` class was implemented to support data structures related to animation.
 
-Briefly described above, each model may contain a set of `AnimationClip` instances and sets of `Bone` and `SceneNode` instances that make up the skeleton of a model. Going deeper, each `AnimationClip` contains a series of `BoneAnimation` instances, which stores the `Keyframe` instances associated with a `Bone`, and a `Keyframe` cotains the transformation information for a Bone at a given timestamp.
+Briefly described above, each model may contain a set of `AnimationClip` instances and sets of `Bone` and `SceneNode` instances that make up the skeleton of a model. Going deeper, each `AnimationClip` contains a series of `BoneAnimation` instances, which stores the `Keyframe` instances associated with a `Bone`, and a `Keyframe` contains the transformation information for a Bone at a given timestamp.
 
 To play these animations, I created the `AnimatorComponent` class, a component class derived from Entity that manages playback of a given `AnimationClip` of an associated `Model`.
 

@@ -21,7 +21,7 @@ Welcome to the fourth entry following the creation of a rendering abstraction la
 As a reminder, in the last entry, I described my initial implementation of an asset management pipeline, including an implementation of a `Model` class that represents the physical properties of an `Entity` object in my engine and a `Transform` class to support it. This past week saw those implementations put to the test as I demonstrated rendering the solar system within the engine using DirectX11.
 
 ![Solar System Demo](/assets/images/SolarSystemDemo.png)
-<figcaption class="caption">Solar Sytem Demo.</figcaption>
+<figcaption class="caption">Solar System Demo.</figcaption>
 
 ## Data-Driven Solar System
 
@@ -92,7 +92,7 @@ However, the data-driven aspects did not stop there. In fact, the entire solar s
 }
 {% endhighlight %}
 
-Finally, each solar body had configurable properties exposed to the reflection system to more accurately simulate the appearence, orientation, and astrological movement of each.
+Finally, each solar body had configurable properties exposed to the reflection system to more accurately simulate the appearance, orientation, and astrological movement of each.
 
 {% highlight json linenos %}
 "Earth": {
@@ -154,7 +154,7 @@ By maintaining the inner matrix as a cache that stores the result of the last ma
 
 ## Rendering API Interface
 
-With the integration of the rendering framework from the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) created by Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I reached the point where the initial implmentation of the rendering abstraction layer was needed to prevent dependencies on DirectX in API agnostic engine code.
+With the integration of the rendering framework from the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) created by Dr. Paul Varcholik for his book *Real Time 3D Rendering with DirectX and HLSL*, I reached the point where the initial implementation of the rendering abstraction layer was needed to prevent dependencies on DirectX in API agnostic engine code.
 
 As the initial implementation, I created the `RenderingManager` class as an interface that declares structs and pure virtual method prototypes for wrapping rendering API data types and functionality respectively.
 
