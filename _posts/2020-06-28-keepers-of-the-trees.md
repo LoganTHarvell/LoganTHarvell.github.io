@@ -1,6 +1,6 @@
 ---
 headerImage: true
-image: /assets/images/KeepersOfTheTrees/logo.png
+image: /assets/images/KeepersOfTheTrees/KeepersOfTheTrees.jpg
 title: "Keepers of the Trees"
 author: LoganHarvell
 date: 2020-06-28 11:00
