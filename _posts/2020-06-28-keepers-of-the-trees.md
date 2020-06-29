@@ -4,7 +4,7 @@ image: /assets/images/KeepersOfTheTrees/KeepersOfTheTrees.jpg
 title: "Keepers of the Trees"
 author: LoganHarvell
 date: 2020-06-28 11:00
-description: Local co-op puzzle platformer developed from Studio Chili. Available on Steam starting August 7th, 2020.
+description: Local co-op puzzle platformer developed by Studio Chili. Available on Steam starting August 7th, 2020.
 tag:
 - UE4
 - Game
