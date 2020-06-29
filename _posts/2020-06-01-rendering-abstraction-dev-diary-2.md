@@ -24,7 +24,7 @@ If you have been following along, then you will remember that last week saw a ma
 
 ### Refactored Parser
 
-![Old Ownership Hierarchy](/assets/images/OldEngineHierarchy.png)
+![Old Ownership Hierarchy](/assets/images/FieaGameEngine/OldEngineHierarchy.png)
 <figcaption class="caption">Old ownership hierarchy.</figcaption>
 
 Previously, the core system of the engine was tied to four largely redundant layers of separate classes linked together through a linear chain of ownership. Due to this, the common base for the separate layers fell on the reflection system. However, this felt clunky with each layer holding a name attribute that had to be parsed in addition to the name of attribute to which the object belonged, shown below.
@@ -85,7 +85,7 @@ Previously, the core system of the engine was tied to four largely redundant lay
 
 <div class="breaker"></div>
 
-![New Ownership Hierarchy](/assets/images/NewEngineOwnershipHierarchy.png)
+![New Ownership Hierarchy](/assets/images/FieaGameEngine/NewEngineOwnershipHierarchy.png)
 <figcaption class="caption">Refactored ownership hierarchy.</figcaption>
 
 With the refactor, the core system was simplified down to a few small main classes all derived from a single base Entity class that maintains a set of child Entity-derived class instances directly within its attribute mappings. Due to this flatter structure and using the attribute key to replace the previous redundant name attribute, I was able to greatly shorten the JSON syntax and increase readability, shown below.
@@ -122,7 +122,7 @@ With the refactor, the core system was simplified down to a few small main class
 
 Now that the refactor is largely finished, I have moved onto learning about asset management systems and the best way to handle the life cycle of models and textures within the engine. After spending some time, I have broken the asset management into what I consider the three main stages: import, runtime, and storage.
 
-![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
+![Tentative Asset Pipeline](/assets/images/FieaGameEngine/AssetManagement.png)
 <figcaption class="caption">Tentative asset pipeline.</figcaption>
 
 In this pipeline, assets are imported from common file formats during the import stage using their respective importers. I plan on using SOIL2 for texture importing and ASSIMP for model importing into `Texture` and `Model` class instances representing the data. Once both assets are in the game, they will be handed off to the `ContentManager`.

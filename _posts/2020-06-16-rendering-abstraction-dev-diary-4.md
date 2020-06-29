@@ -20,7 +20,7 @@ Welcome to the fourth entry following the creation of a rendering abstraction la
 
 As a reminder, in the last entry, I described my initial implementation of an asset management pipeline, including an implementation of a `Model` class that represents the physical properties of an `Entity` object in my engine and a `Transform` class to support it. This past week saw those implementations put to the test as I demonstrated rendering the solar system within the engine using DirectX11.
 
-![Solar System Demo](/assets/images/SolarSystemDemo.png)
+![Solar System Demo](/assets/images/FieaGameEngine/SolarSystemDemo.png)
 <figcaption class="caption">Solar System Demo.</figcaption>
 
 ## Data-Driven Solar System
@@ -162,7 +162,7 @@ Then I created `RenderingManager_DirectX11`, as a derived class from `RenderingM
 
 In practice, this allows for the `World` class to maintain a reference to the current `RenderingManager` instance. This reference can then be passed within the `WorldState` down the `Entity` hierarchy, enabling components to access the rendering interface without dependencies on DirectX.
 
-![Rendering Manager](/assets/images/RenderingManager.png)
+![Rendering Manager](/assets/images/FieaGameEngine/RenderingManager.png)
 <figcaption class="caption">Rendering Manager design.</figcaption>
 
 ## Next Steps

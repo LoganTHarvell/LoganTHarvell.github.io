@@ -74,12 +74,12 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 
 <div class="breaker"></div>
 
-![New Inheritance Hierarchy](/assets/images/NewEngineInheritanceHierarchy.png)
+![New Inheritance Hierarchy](/assets/images/FieaGameEngine/NewEngineInheritanceHierarchy.png)
 <figcaption class="caption">Engine core inheritance hierarchy.</figcaption>
 
 <div class="breaker"></div>
 
-![New Ownership Hierarchy](/assets/images/NewEngineOwnershipHierarchy.png)
+![New Ownership Hierarchy](/assets/images/FieaGameEngine/NewEngineOwnershipHierarchy.png)
 <figcaption class="caption">Engine core ownership hierarchy.</figcaption>
 
 ## Goals

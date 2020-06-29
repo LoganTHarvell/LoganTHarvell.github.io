@@ -18,12 +18,12 @@ category: blog
 
 Welcome! This is now the third entry into the developer diary detailing the creation of a rendering abstraction layer within a custom [data-driven game engine](/fiea-game-engine)! If you are new, past entries can be found on my blog or through the links found at the bottom of this post. Last week, I introduced a tentative asset pipeline. Today, I will discuss a slightly streamlined design and some of the implementation.
 
-![Tentative Asset Pipeline](/assets/images/AssetManagement.png)
+![Tentative Asset Pipeline](/assets/images/FieaGameEngine/AssetManagement.png)
 <figcaption class="caption">Previous asset pipeline design.</figcaption>
 
 <div class="breaker"></div>
 
-![New Asset Pipeline](/assets/images/NewAssetManagement.png)
+![New Asset Pipeline](/assets/images/FieaGameEngine/NewAssetManagement.png)
 <figcaption class="caption">New asset pipeline design.</figcaption>
 
 With this design in mind, focus shifted towards implementation. Following along the [examples](https://bitbucket.org/pvarcholik/real-time-3d-rendering-with-directx-and-hlsl/src/master/) provided by my advisor, Dr. Paul Varcholik, for his book *Real Time 3D Rendering with DirectX and HLSL*, I implemented two key pieces in the asset pipeline and a component for animating a model at runtime.
