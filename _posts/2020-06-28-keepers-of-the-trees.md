@@ -39,7 +39,7 @@ If you would like to have follow along with updates for the game, you can follow
     <div class="toRight">
         <p>Studio Chili was founded December 2019 by a group of graduate students at the <em>Florida Interactive Entertainment Academy</em> comprising a diverse group of producers, designers, artists, and programmers.</p>
 
-        <p>In total, our team have grown to 23 talented developers led by our project lead, Samuel Roberts. Our leadership team includes Brenan Wayland for design, Austin Labarbera for art, myself for programming, and Dennis Yelito as our production manager.</p>
+        <p>In total, our team have grown to 21 talented developers led by our project lead, Samuel Roberts. Our leadership team includes Brenan Wayland for design, Austin Labarbera for art, myself for programming, and Dennis Yelito as our production manager.</p>
     </div>
 </div>
 
