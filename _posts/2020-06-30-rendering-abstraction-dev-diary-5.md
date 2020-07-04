@@ -68,7 +68,7 @@ With the updated parse helper, now all elements of the `SolarSystem` could be pr
 
 This was done by simply increasing the distance and time scale values, and the sun diameter shown in the JSON below, and also adding JSON for the planets similar to what was shown in [Dev Diary #4](/rendering-abstraction-layer-dev-diary-4).
 
-```json
+{% highlight json linenos %}
 {
   "DistanceScale": {
     "type": "float",
@@ -91,7 +91,7 @@ This was done by simply increasing the distance and time scale values, and the s
     }
   }
 }
-```
+{% endhighlight %}
 
 ## Reworked Actor Class
 

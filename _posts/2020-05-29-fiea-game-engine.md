@@ -1,5 +1,6 @@
 ---
-headerImage: false
+headerImage: true
+image: /assets/images/FieaGameEngine/Title.png
 title: "Fiea Game Engine"
 author: LoganHarvell
 date: 2020-05-29 8:19
@@ -9,7 +10,8 @@ tag:
 - C++
 layout: post
 category: project
-youTubeId: Q54NgtNZpVE
+youTubeIdOverview: QRP27i-vNck
+youTubeIdBomberman: Q54NgtNZpVE
 ---
 
 ## Summary
@@ -21,6 +23,10 @@ Having always been interested in engine development and systems design, I tackle
 As of May 2020, I have begun work on a rendering abstraction layer for the engine with the intention of enabling support for multiple rendering API. The abstraction layer will act as an interface for rendering functionality that could then be implemented by any rendering API, i.e. OpenGL, Vulkan, DirectX11, DirectX12, and Metal, as needed to best support the developed application and it's target platforms. You can read more about this in the weekly developer diary blog series starting with the first post [here](/rendering-abstraction-dev-diary-1).
 
 ## Overview
+
+If you would like to view the overview presentation slides for the Fiea Game Engine, click <a href="/assets/files/FieaGameEngineOverview.pdf" target="_blank">here</a>.
+
+{% include youTube.html id=page.youTubeIdOverview %}
 
 ### Core
 
@@ -41,17 +47,17 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
   * Combined with `Factory`, this enables the engine to be completely data driven
   * Handler for parsing JSON data into the reflection system, enabling JSON as a configuration language
 * **Events**
-  * `IEventSubscriber`, acts as an interface for classes to observe an `Event`
-  * `EventPublisher`, publishes an `Event` to subscribers
+  * `IEventSubscriber`, acts as an interface for classes to observe an event
+  * `EventPublisher`, publishes an event to subscribers
   * `Event`, subject that can be subscribed to by `IEventSubscriber` instances
     * Derived from `EventPublisher`
     * Takes a generic type "payload" as a template parameter
-    * Manages the list of subscribers to the `Event`
-  * `EventQueue`, manages the queue of events, firing an `Event` as it expires
+    * Manages the list of subscribers to the event
+  * `EventQueue`, manages the queue of events, firing an event as it expires
 * **Entity System**
   * `Entity`, an `Attributed` derived class thinly wrapping `Scope`, represents a base level engine object
     * All engine classes that wish to be integrated into the core game loop derive from this class
-    * Supports composition through parent and child relationships with other `Entity` objects
+    * Supports composition through parent and child relationships with other entities
   * `World`, a top level `Entity` class that manages a simulation, a.k.a. a game
     * Owns the `GameClock` and the `WorldState`, which owns reference to `GameTime` and the `EventQueue`
     * Uses the above classes to manage the game loop
@@ -86,6 +92,6 @@ As of May 2020, I have begun work on a rendering abstraction layer for the engin
 
 After wrapping up the initial engine development towards the end of April 2020, the first major milestone for the engine was marked by its use in the recreation of the battle mode of *Super Bomberman* for the SNES.
 
-{% include youTube.html id=page.youTubeId %}
+{% include youTube.html id=page.youTubeIdBomberman %}
 
 The next goal of this project will be the culmination of the current work on a rendering abstraction layer for the engine. This is planned as a visual demonstration of a dynamic scene rendered using the rendering abstraction layer with an implementation both in OpenGL 4.6 and DirectX11 as a proof-of-concept.
