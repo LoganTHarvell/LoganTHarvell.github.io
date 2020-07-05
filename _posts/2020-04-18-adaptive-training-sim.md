@@ -15,9 +15,9 @@ category: project
 
 The adaptive training simulator is a prototype driving simulator where players drive a police vehicle to locations specified by GPS while completing various tasks. Tasks were periodic and included:
 
-- Visual tasks, where players must find a target at the given location
-- Auditory tasks, where players must quickly respond to cues from the police radio
-- Cognitive tasks, where players must re-confirm the shortest route on the GPS
+- Visual, where players must find a target at the given location
+- Auditory, where players must quickly respond to cues from the police radio
+- Cognitive, where players must re-confirm the shortest route on the GPS
 
 The project was created for the Federal Law Enforcement Training Center (FLETC) and developed by an external team of seven people using Unreal Engine 4 (UE4). Its purpose was to serve as a proof-of-concept for an adaptive training simulator that could utilize biometric feedback provided by proprietary hardware to allow for difficulty conditions to be adjusted during a session.
 
