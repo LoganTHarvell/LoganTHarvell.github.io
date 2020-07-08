@@ -1,11 +1,12 @@
 ---
-headerImage: false
+headerImage: true
+image: /assets/images/FieaGameEngine/Title.png
 title: "Entity Parsing, New and Improved"
 subtitle: "Rendering Abstraction #2"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-01 14:05
-description: Creating a rendering abstraction layer for a custom game engine.
+description: Dev diary series on implementing a rendering abstraction layer within a custom game engine.
 tag:
 - Dev Diary
 - Rendering

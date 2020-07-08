@@ -1,11 +1,12 @@
 ---
-headerImage: false
+headerImage: true
+image: /assets/images/FieaGameEngine/Title.png
 title: "Solar System Demo & Transforms"
 subtitle: "Rendering Abstraction #4"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-16 14:20
-description: Creating a rendering abstraction layer for a custom game engine.
+description: Dev diary series on implementing a rendering abstraction layer within a custom game engine.
 tag:
 - Dev Diary
 - Rendering

@@ -1,11 +1,12 @@
 ---
-headerImage: false
+headerImage: true
+image: /assets/images/FieaGameEngine/Title.png
 title: "Hot Reloading the Solar System"
 subtitle: "Rendering Abstraction #5"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-30 10:00
-description: Creating a rendering abstraction layer for a custom game engine.
+description: Dev diary series on implementing a rendering abstraction layer within a custom game engine.
 tag:
 - Dev Diary
 - Rendering

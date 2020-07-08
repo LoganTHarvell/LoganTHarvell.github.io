@@ -1,11 +1,12 @@
 ---
-headerImage: false
+headerImage: true
+image: /assets/images/FieaGameEngine/Title.png
 title: "Asset Management + Models & Animation"
 subtitle: "Rendering Abstraction #3"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-09 12:28
-description: Creating a rendering abstraction layer for a custom game engine.
+description: Dev diary series on implementing a rendering abstraction layer within a custom game engine.
 tag:
 - Dev Diary
 - Rendering
