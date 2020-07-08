@@ -1,7 +1,8 @@
 ---
 headerImage: false
-title: "Rendering Abstraction Layer, Dev Diary #5"
-series: Rendering Abstraction Layer, Dev Diary
+title: "Hot Reloading the Solar System"
+subtitle: "Rendering Abstraction #5"
+series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-30 10:00
 description: Creating a rendering abstraction layer for a custom game engine.

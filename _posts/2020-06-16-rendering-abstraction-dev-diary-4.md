@@ -1,7 +1,8 @@
 ---
 headerImage: false
-title: "Rendering Abstraction Layer, Dev Diary #4"
-series: Rendering Abstraction Layer, Dev Diary
+title: "Solar System Demo & Transforms"
+subtitle: "Rendering Abstraction #4"
+series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-16 14:20
 description: Creating a rendering abstraction layer for a custom game engine.

@@ -1,7 +1,8 @@
 ---
 headerImage: false
-title: "Rendering Abstraction Layer, Dev Diary #2"
-series: Rendering Abstraction Layer, Dev Diary
+title: "Entity Parsing, New and Improved"
+subtitle: "Rendering Abstraction #2"
+series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-01 14:05
 description: Creating a rendering abstraction layer for a custom game engine.

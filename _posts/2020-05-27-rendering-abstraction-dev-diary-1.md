@@ -1,7 +1,8 @@
 ---
 headerImage: false
-title: "Rendering Abstraction Layer, Dev Diary #1"
-series: Rendering Abstraction Layer, Dev Diary
+title: "Next Step for Fiea Game Engine"
+subtitle: "Rendering Abstraction #1"
+series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-05-27 14:54
 description: Creating a rendering abstraction layer for a custom game engine.

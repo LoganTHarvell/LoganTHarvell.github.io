@@ -1,7 +1,8 @@
 ---
 headerImage: false
-title: "Rendering Abstraction Layer, Dev Diary #3"
-series: Rendering Abstraction Layer, Dev Diary
+title: "Asset Management + Models & Animation"
+subtitle: "Rendering Abstraction #3"
+series: Rendering Abstraction Dev Diary
 author: LoganHarvell
 date: 2020-06-09 12:28
 description: Creating a rendering abstraction layer for a custom game engine.
