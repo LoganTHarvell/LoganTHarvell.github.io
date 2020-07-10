@@ -28,7 +28,7 @@ Instead of doing those first. I decided to focus on the second part that I had p
 
 ## Struggling with the Design
 
-Very early on, I had a `RenderingManager` class that had a DirectX implementation in a source file surrounded by an `ifdef` when a pre-processor definition was set appropriately. This was just a quick and dirty solution to get the solar system demo up and running.
+Very early on, I had a `RenderingManager` class that had a DirectX implementation in a source file surrounded by a `#ifdef` when a pre-processor definition was set appropriately. This was just a quick and dirty solution to get the solar system demo up and running.
 
 This meant I was required to have a `RenderingManager` definition to compile, and I could not change the rendering implementation without completely recompiling. So this past week I really struggled with finding the right design for the rendering abstraction layer, and I kept a couple guidelines in mind, directly antithetical to that first pass:
 
@@ -36,11 +36,11 @@ This meant I was required to have a `RenderingManager` definition to compile, an
 - Easy rendering implementation swaps at runtime (and obviously no re-compilation required)
 - Minimal required pre-processor definitions
 
-## Working Through Some Things
+## Working Through It
 
 One of the first new attempts at refactoring was making `RenderingManager` and abstract base class and implementing the base class with a DirectX11 implementation. Then I moved the DirectX11 implementation to it's own shared items project in Visual Studio, with only the Windows version of the engine static library referencing it.
 
-This first change solved the ability to compile without rendering support and isolated the DirectX11 dependency to only projects that would support it (read: no more `ifdef`).
+This first change solved the ability to compile without rendering support and isolated the DirectX11 dependency to only projects that would support it (read: no more `#ifdef`).
 
 Next, I took a long detour examining how the pointer-to-implementation (PImpl) design pattern could be taken advantage of for swapping between implementations. The (PImpl) design pattern is a tool for separating a class into two parts an abstraction and an implementation, and allows for the two to be developed separately.
 
@@ -48,8 +48,24 @@ This is especially helpful when you want to be able to swap out a loaded binary 
 
 At first, this seemed to be exactly what I needed, but after struggling with the implementation I discovered it was actually just the wrong tool for the job. It only allows for one implementation at the same time, but I want to be able to support several.
 
-So next I looked at other design patterns, including Bridge and Template Method patterns. Their approaches led me in the right direction. Though I realized later, it was still not quite on the mark. However by then my implementation had naturally evolved into a working version that when re-examined is closely follows the Strategy design pattern.
+So next I looked at other design patterns, notably the Bridge pattern, where the users can still separate the abstraction from the implementation, but also swap the implementor at run-time. Later I would realize my intent actually more aligns with the Strategy pattern, but, regardless, this approach led me in the right direction.
+
+The next invaluable assist came from [LLGL](https://github.com/LukasBanana/LLGL), an open source low-level graphics library from [Lukas Hermanns](https://lukas-hermanns.info/). I was able to take a lot of inspiration from the project.
 
 ## Following the Strategy
 
-In its current state, it actually remains similar to the implementation before going down the rabbit hole with the PImpl pattern and company, but greatly expanded. The rendering interface is broken into distinct components, with each having an abstract base class that defines the shared implementations and interface of the rendering component (i.e. a buffer).
+In its current state, it actually remains similar to the implementation as it existed before going down the rabbit hole with the PImpl pattern, but greatly expanded. The client (generally the `World` instance), references the abstraction of the rendering interface, the `RenderingManager`, same as before. However, the rendering interface is broken down further into distinct components, with each having an abstract base class that defines the shared implementations and interface of the rendering component, i.e. a resource buffer.
+
+![Rendering Abstraction](/assets/images/FieaGameEngine/RenderingAbstraction.png)
+
+At the moment, the `RenderingManager` has the single DirectX 11 implementation, which contains implementors of the rendering components `RenderContext` and `Buffer`, looking to LLGL for an idea of how to set up the structure. These implementations allow me to abstract the index buffer and set the render context to draw it.
+
+The next step is implementing the `DrawIndexed` method, which will let me remove all dependencies in the DirectX 11 framework related to drawing index buffers, replacing the code with calls to the `RenderingManager`.
+
+## Next Steps (Keep Following It)
+
+Obviously, the rendering abstraction still has a lot of work to be done, and the solar system demo still largely relies on the DirectX 11 framework written for the book *Real Time 3D Rendering with DirectX and HLSL* by Dr. Paul Varcholik.
+
+Logically, the next step going forward is to continue incrementally implementing the rendering components and desired methods, replacing the dependencies in the DirectX 11 framework with calls to `RenderingManager` as described for `DrawIndexed` above. Once a part of the framework no longer has any dependencies, they will be integrated into the engine, and this will continue until the entire framework is completely integrated.
+
+With that, you now know what I will be doing for the next short while, so I hope to come back with another update next week going over the progress. Thanks for reading!

@@ -22,7 +22,7 @@ youTubeIdCheckpointSystem: '8W__dI7S2Ho'
 
 ## What is Keepers of the Trees?
 
-*Keepers of the Trees* is a local co-op puzzle platformer being developed by Studio Chili for release on Steam August 7th, 2020. It is set in a fantastical forest where two curious little Keepers explore, growing and de-growing plants to their advantage as they go on their adventures.
+*Keepers of the Trees* is a local co-op puzzle platformer being developed by Studio Chili for release on [Steam](https://store.steampowered.com/app/1356800/Keepers_of_the_Trees/?curator_clanid=4777282&utm_source=SteamDB) August 7th, 2020. It is set in a fantastical forest where two curious little Keepers explore, growing and de-growing plants to their advantage as they go on their adventures.
 
 ![KeepersLog](/assets/images/KeepersOfTheTrees/KeepersLog.jpg)
 <figcaption class="caption">The Keepers</figcaption>
