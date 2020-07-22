@@ -5,7 +5,7 @@ title: "Shaders and Materials"
 subtitle: "Rendering Abstraction #8"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
-date: 2020-07-16 13:50
+date: 2020-07-22 13:50
 description: Dev diary series on implementing a rendering abstraction layer within a custom game engine.
 tag:
 - Dev Diary
