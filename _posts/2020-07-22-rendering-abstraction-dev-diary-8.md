@@ -1,7 +1,7 @@
 ---
 headerImage: true
 image: /assets/images/FieaGameEngine/Title.png
-title: "Materials"
+title: "Shaders and Materials"
 subtitle: "Rendering Abstraction #8"
 series: Rendering Abstraction Dev Diary
 author: LoganHarvell
@@ -39,6 +39,8 @@ At the moment, the `Material` class stores a reference to the `RenderingManager`
 All buffers and drawing are entirely abstracted within the `Material` class. However, the shader system still needs to be abstracted to be able to completely remove the DirectX 11 dependencies from the material class.
 
 To do this, the shader base class and each derived shader type will have to separated into an abstracted interface, with the underlying native data handles and behavior to be stored and executed in the rendering API implementation of the shader interface.
+
+Any `Entity` class can then own a material, which can then be used to draw the meshes of a `Model` that represents it physically in the game.
 
 ## Next Goals
 
