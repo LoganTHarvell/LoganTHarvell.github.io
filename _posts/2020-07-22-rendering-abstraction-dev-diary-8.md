@@ -30,6 +30,8 @@ Additionally, I implemented basic drawing methods, largely used by the material 
 
 ## Shaders and Materials
 
+![Materials](/assets/images/FieaGameEngine/Materials.png)
+
 The `Shader` and `Material` classes are the foundational classes within rendering framework. Shaders are small programs that can be executed on the GPU quickly, converting the data within buffers ultimately into the pixels to be drawn to the screen.
 
 Each shader contains its own binary data, native handle to the shader class, and the input layout of the per vertex attributes. Materials contain shaders and manage setting the appropriate shader and input layouts to be used when drawing a given vertex buffer and optionally an associated index buffer.
