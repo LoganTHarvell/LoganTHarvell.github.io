@@ -7,7 +7,7 @@ permalink: /about/
 
 ## About Me
 
-Hello world, or otherwise nerdy voyeur. My name is Logan Harvell, and this site collects my musings and tinkerings as a developer.
+Hello world, or otherwise curious voyeur! My name is Logan Harvell, and this site collects my musings and tinkerings as a developer.
 
 Before getting into more technical discussion, I would like to talk a bit about myself. I hail from a small city named Orlando located somewhere around the middle of the lovely sunshine state, Florida. So, naturally, I spend many of my days hiding from the sun in front of a screen. I am a lover of science fiction and fantasy, video games, movies, anime, graphic novels, and most things from the 90's.
 
@@ -19,4 +19,6 @@ After graduating in December 2018, I spent over half a year as a research assist
 
 At FIEA, I worked on several different small teams to create two week game prototypes, programmed games in from scratch in 68K assembly and C/C++, as well as in Unity and Unreal Engine 4 using C# and C++ respectively. I also developed a [custom data-driven game engine](/fiea-game-engine) from scratch. Since December 2019, I've been the lead programmer on Keepers of the Trees at Studio Chili, a studio formed with 20+ artists, designers, and programmers. [Keepers of the Trees](/keepers-of-the-trees) is a local co-op puzzle platformer created in Unreal Engine 4, aiming for release on for release on [Steam](https://store.steampowered.com/app/1356800/Keepers_of_the_Trees/?curator_clanid=4777282&utm_source=SteamDB) August 7th, 2020.
 
-I anticipate my graduation from FIEA in December 2020. However, starting August 2020 and beyond, I will be pursuing future job opportunities in game development. You can find some of my projects [here](/projects) and my resume <a href="/assets/files/Resume.pdf" target="_blank">here</a>. Whether it is about job opportunities or just a chat, please feel free to contact me!
+Since August 2020, I have interned, full-time, as an Engine Programmer on the Special Projects team at Epic Games. My role includes supporting projects and designers by creating UI and gameplay systems using C++ and Unreal Engine blueprints, as well as integrating, testing, and debugging new engine features from Unreal Engine 5.
+
+I anticipate my graduation from FIEA in December 2020. Post-graduation, I will be pursuing full-time Engine Programmer roles in games development. You can find some of my projects [here](/projects) and my resume <a href="/assets/files/Resume.pdf" target="_blank">here</a>. Whether it is about job opportunities or just a chat, please feel free to contact me!
